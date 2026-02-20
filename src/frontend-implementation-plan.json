@@ -1,0 +1,333 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Complete UI rework with glassmorphism navbar, gradient background with pixel clouds, and modern hero section",
+  "requirements": [
+    {
+      "id": "REQ-38",
+      "summary": "Remove the existing HellCodMC logo from the top-left corner by deleting the SiteLogo component references and file",
+      "acceptanceCriteria": [
+        "SiteLogo component is not rendered in App.tsx",
+        "frontend/src/components/SiteLogo.tsx file is deleted",
+        "No logo image appears in the top-left corner"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Remove the SiteLogo component import and its rendering from the main App component"
+        },
+        {
+          "path": "frontend/src/components/SiteLogo.tsx",
+          "operation": "delete",
+          "description": "Delete the SiteLogo component file as it is no longer needed"
+        }
+      ]
+    },
+    {
+      "id": "REQ-39",
+      "summary": "Create a new Header component with a clean, minimal, semi-transparent navigation bar featuring glassmorphism styling with soft blur, low-opacity background, and navigation items with smooth hover glow effects in bright cyan or soft purple with gentle transition animations",
+      "acceptanceCriteria": [
+        "Header component exists at frontend/src/components/Header.tsx",
+        "Navigation bar uses glassmorphism with backdrop-blur and low opacity background",
+        "Navigation items have hover glow effects in cyan or purple",
+        "Smooth CSS transitions are applied to all interactive elements",
+        "Header is responsive across mobile, tablet, and desktop breakpoints"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "create",
+          "description": "Create a new Header component with semi-transparent glassmorphism navigation bar featuring backdrop-blur, low-opacity background, navigation items with hover glow effects in cyan/purple, smooth transitions, and full responsive design across mobile (320px, 640px), tablet (768px), and desktop (1024px+) breakpoints"
+        }
+      ]
+    },
+    {
+      "id": "REQ-40",
+      "summary": "Replace the current background with a smooth vertical gradient transitioning from rich medium blue at the top to soft light sky blue at the bottom, ensuring the gradient is clean and non-pixelated",
+      "acceptanceCriteria": [
+        "Background uses CSS gradient from medium blue to light sky blue",
+        "Gradient is smooth without pixelation or banding",
+        "Gradient covers the entire viewport and extends with page scroll"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Remove the Minecraft sky background image and replace with a smooth vertical gradient from rich medium blue to soft light sky blue, ensuring clean rendering without pixelation or banding, covering the entire viewport"
+        }
+      ]
+    },
+    {
+      "id": "REQ-41",
+      "summary": "Overlay crisp, pixelated Minecraft-style white clouds with sharp square edges that drift slowly from left to right in a seamless loop, moving in a gentle wave motion with very slight stepped up-and-down pixel movement, keeping the sky smooth while clouds remain distinctly blocky",
+      "acceptanceCriteria": [
+        "Pixel-art clouds with hard square edges are overlaid on the gradient background",
+        "Clouds animate horizontally from left to right continuously",
+        "Clouds have subtle vertical wave motion in discrete pixel steps",
+        "Animation loops seamlessly without gaps or jumps",
+        "Clouds remain crisp and blocky against the smooth gradient"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CloudsBackground.tsx",
+          "operation": "modify",
+          "description": "Implement pixel-perfect Minecraft-style cloud overlay using the generated image at frontend/public/assets/generated/minecraft-clouds-pixel.dim_1920x400.png with crisp rendering (image-rendering: pixelated), horizontal left-to-right animation loop, subtle stepped vertical wave motion, seamless looping without gaps, and CSS animations to maintain blocky appearance"
+        }
+      ]
+    },
+    {
+      "id": "REQ-42",
+      "summary": "Redesign the hero section as a centered layout with strong visual hierarchy and balanced spacing, featuring a premium glassmorphism server IP card with semi-transparent dark blue background, soft background blur effect, rounded corners, subtle low-opacity white border, and soft layered shadow for depth separation",
+      "acceptanceCriteria": [
+        "Hero section is centered with clear visual hierarchy",
+        "Server IP card uses glassmorphism with semi-transparent dark blue background",
+        "Card has backdrop-blur CSS effect applied",
+        "Card has rounded corners and subtle white border with low opacity",
+        "Soft layered shadow creates depth separation from background",
+        "Layout is responsive across all device sizes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Redesign the hero section with centered layout, strong visual hierarchy, and balanced spacing. Implement a premium glassmorphism server IP card featuring semi-transparent dark blue background, backdrop-blur effect, rounded corners, subtle low-opacity white border, soft layered shadows for depth, and full responsive design across mobile, tablet, and desktop breakpoints"
+        }
+      ]
+    },
+    {
+      "id": "REQ-43",
+      "summary": "Add a subtle animated cyan glow with smooth pulsing effect to the server IP text within the hero card",
+      "acceptanceCriteria": [
+        "Server IP text has cyan text-shadow or glow effect",
+        "Glow pulses smoothly using CSS animation",
+        "Animation loops continuously with appropriate timing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Add cyan text-shadow glow effect to the server IP text (hellcod.ddns.net:19100) with smooth CSS pulsing animation that loops continuously with appropriate timing for visual appeal"
+        }
+      ]
+    },
+    {
+      "id": "REQ-44",
+      "summary": "Include a minimal copy-to-clipboard button with a clean Minecraft-inspired pixel icon and hover feedback animation in the server IP card",
+      "acceptanceCriteria": [
+        "Copy button exists next to or below the server IP",
+        "Button uses a Minecraft-style pixelated icon",
+        "Hover state provides visual feedback (color change, glow, or scale)",
+        "Button copies server IP to clipboard on click",
+        "Success feedback is shown after copying"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Add a minimal copy-to-clipboard button with Minecraft-inspired pixel icon near the server IP, implementing hover feedback (glow, scale, or color change), clipboard copy functionality on click, and success feedback display after copying"
+        }
+      ]
+    },
+    {
+      "id": "REQ-45",
+      "summary": "Create three floating modern content cards below the hero card displaying 'Game Mode: Lifesteal SMP', 'Version: Any Version Can Play', and 'User Support: Both Java and Bedrock' with hover animations including slight lift effect, soft glow, and subtle scale increase, maintaining consistent spacing and alignment",
+      "acceptanceCriteria": [
+        "Three cards are displayed below the hero card",
+        "Cards show Game Mode, Version, and User Support information",
+        "Cards have consistent spacing and alignment",
+        "Hover state applies lift transform, glow effect, and scale increase",
+        "Cards are responsive and stack or resize appropriately on mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Add three floating modern content cards below the server IP card displaying 'Game Mode: Lifesteal SMP', 'Version: Any Version Can Play', and 'User Support: Both Java and Bedrock'. Implement hover animations with lift transform, soft glow, and subtle scale increase. Ensure consistent spacing, alignment, and responsive behavior (stacking or resizing) on mobile devices"
+        }
+      ]
+    },
+    {
+      "id": "REQ-46",
+      "summary": "Update typography throughout the site with primary headings in pure white, secondary body text in soft icy blue, and accent phrases highlighted in bright cyan or soft purple",
+      "acceptanceCriteria": [
+        "All primary headings (h1, h2) use pure white color",
+        "Body text and secondary text use soft icy blue",
+        "Accent text uses bright cyan or soft purple",
+        "Typography is updated in Tailwind config and applied consistently",
+        "Text maintains strong contrast against the blue gradient background"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Add typography color tokens: pure white for primary headings, soft icy blue for secondary body text, and bright cyan or soft purple for accent phrases. Ensure colors provide strong contrast against the blue gradient background"
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Apply the new typography color scheme: pure white for headings, soft icy blue for body text, and cyan/purple for accent text"
+        },
+        {
+          "path": "frontend/src/components/GameplaySection.tsx",
+          "operation": "modify",
+          "description": "Update typography to use pure white for headings, soft icy blue for body text, and cyan/purple for accents"
+        },
+        {
+          "path": "frontend/src/components/RewardsSection.tsx",
+          "operation": "modify",
+          "description": "Update typography to use pure white for headings, soft icy blue for body text, and cyan/purple for accents"
+        },
+        {
+          "path": "frontend/src/components/ShopInfoSection.tsx",
+          "operation": "modify",
+          "description": "Update typography to use pure white for headings, soft icy blue for body text, and cyan/purple for accents"
+        },
+        {
+          "path": "frontend/src/components/CallToAction.tsx",
+          "operation": "modify",
+          "description": "Update typography to use pure white for headings, soft icy blue for body text, and cyan/purple for accents"
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update typography to use pure white for headings, soft icy blue for body text, and cyan/purple for accents"
+        }
+      ]
+    },
+    {
+      "id": "REQ-47",
+      "summary": "Add a floating primary action button labeled 'Join Now' that combines a subtle Minecraft pixel aesthetic with modern UI polish, including soft hover glow, smooth transitions, and a gentle bounce animation for visual engagement",
+      "acceptanceCriteria": [
+        "Join Now button is prominently displayed",
+        "Button has Minecraft-inspired pixel styling with modern polish",
+        "Hover state adds soft glow effect",
+        "Button has smooth CSS transitions",
+        "Gentle bounce animation enhances visual appeal",
+        "Button links to Discord server or appropriate destination"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Add a prominent 'Join Now' primary action button with Minecraft-inspired pixel aesthetic and modern UI polish. Implement soft hover glow effect, smooth CSS transitions, gentle bounce animation, and link to Discord server (https://discord.gg/PqWapJ3AqU)"
+        }
+      ]
+    },
+    {
+      "id": "REQ-48",
+      "summary": "Ensure full responsive layout optimization for mobile (320px, 640px), tablet (768px), and desktop (1024px+) breakpoints with strong contrast, accessibility standards, and seamless animations across all device types",
+      "acceptanceCriteria": [
+        "Layout adapts smoothly to mobile (320px, 640px), tablet (768px), and desktop (1024px+)",
+        "Text remains readable at all breakpoints",
+        "Interactive elements are appropriately sized for touch on mobile",
+        "Animations perform smoothly on all devices",
+        "Color contrast meets WCAG accessibility standards",
+        "Navigation is usable on mobile devices"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Verify and enhance responsive behavior for mobile (320px, 640px), tablet (768px), and desktop (1024px+) breakpoints, ensuring touch-friendly interactive elements and accessible navigation"
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Verify and optimize responsive layout, ensuring text readability, appropriate touch target sizes, and smooth animations across all device types while maintaining WCAG color contrast standards"
+        },
+        {
+          "path": "frontend/src/components/GameplaySection.tsx",
+          "operation": "modify",
+          "description": "Verify responsive card layout, text sizing, and animation performance across mobile, tablet, and desktop breakpoints"
+        },
+        {
+          "path": "frontend/src/components/RewardsSection.tsx",
+          "operation": "modify",
+          "description": "Verify responsive grid/card layout, text readability, and smooth animations on all device sizes"
+        },
+        {
+          "path": "frontend/src/components/ShopInfoSection.tsx",
+          "operation": "modify",
+          "description": "Verify responsive card layout and text sizing on mobile, tablet, and desktop"
+        },
+        {
+          "path": "frontend/src/components/CallToAction.tsx",
+          "operation": "modify",
+          "description": "Verify responsive text sizing and button accessibility across all breakpoints"
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Verify responsive footer layout and text sizing on all device types"
+        }
+      ]
+    },
+    {
+      "id": "REQ-49",
+      "summary": "Remove the IntroSequence component and its associated state management from App.tsx to eliminate the black screen intro animation",
+      "acceptanceCriteria": [
+        "IntroSequence component is not rendered in App.tsx",
+        "showIntro state and sessionStorage logic are removed",
+        "Application loads directly to the main content without intro animation",
+        "frontend/src/components/IntroSequence.tsx file can be deleted or kept for reference"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Remove IntroSequence component import, showIntro state, sessionStorage logic, and conditional rendering so the application loads directly to main content without the intro animation"
+        }
+      ]
+    },
+    {
+      "id": "REQ-50",
+      "summary": "Update the Header component to be rendered at the top of App.tsx, replacing or preceding existing content",
+      "acceptanceCriteria": [
+        "Header component is imported and rendered in App.tsx",
+        "Header appears at the top of the page layout",
+        "Header is visible on all pages/sections"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the new Header component at the top of the App layout, ensuring it appears before all other sections and is visible throughout the application"
+        }
+      ]
+    },
+    {
+      "id": "REQ-51",
+      "summary": "Update frontend/src/index.css to remove the Minecraft sky background image and apply the smooth blue vertical gradient instead",
+      "acceptanceCriteria": [
+        "Background image reference is removed from index.css",
+        "Vertical gradient from medium blue to light sky blue is applied to body or main container",
+        "Gradient covers entire viewport"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Remove the minecraft-sky-background.dim_1920x1080.png image reference and replace with a smooth vertical gradient from rich medium blue to soft light sky blue, applied to body or main container, ensuring full viewport coverage"
+        }
+      ]
+    },
+    {
+      "id": "REQ-52",
+      "summary": "Update frontend/tailwind.config.js to include cyan, soft purple, icy blue, and appropriate blue shades that match the new design direction for use throughout components",
+      "acceptanceCriteria": [
+        "Tailwind config includes cyan color shades",
+        "Tailwind config includes soft purple color shades",
+        "Tailwind config includes icy blue color shades",
+        "Colors are organized and documented for consistent use"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the theme colors with cyan, soft purple, icy blue, and appropriate blue shades (medium blue, light sky blue) that match the new glassmorphism design direction. Organize and document colors for consistent component usage"
+        }
+      ]
+    }
+  ]
+}

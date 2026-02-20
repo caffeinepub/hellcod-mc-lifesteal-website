@@ -1,0 +1,588 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 19,
+  "summary": "Minecraft Lifesteal server website (HellCod MC) with glassmorphism navbar, animated pixel-art clouds on smooth gradient background, premium glassmorphism server IP card, three floating content cards (game mode/version/support), responsive mobile-first design, and modern SaaS-level polish",
+  "architectural_notes": [
+    "Website for Minecraft Lifesteal server promotion",
+    "Server IP: hellcod.ddns.net:19100",
+    "Discord link integration: https://discord.gg/PqWapJ3AqU",
+    "Intro sequence before main content display",
+    "Mobile-responsive design for all screen sizes",
+    "Blue/aqua gradient sky background (deep to pale blue)",
+    "Discord link updated to: https://discord.gg/PqWapJ3AqU",
+    "Shop integration: Premium items and crate keys available via Discord server purchase",
+    "Minecraft-style font used throughout the website",
+    "Glassmorphism styling throughout UI (navbar, cards, hero section)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Pixelated Minecraft-style white clouds with sharp square edges on transparent background for overlay animation (minecraft-clouds-pixel.dim_1920x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-black-screen-intro-sequence-that-displays-on-initial-page-load-with-the-text-welcome-player-unknown-get-ready-to-dive-into-the-world-of-lifesteal-with-hellcodmc-appearing-with-stylized-animation-followed-by-automatic-transition-to-the-main-page",
+      "title": "Create a black screen intro sequence that displays on initial page load with the text 'Welcome Player [UNKNOWN], Get Ready To Dive Into The World Of LifeSteal With HellCodMC' appearing with stylized animation, followed by automatic transition to the main page",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-the-main-page-with-a-visual-style-combining-clay-morphism-glass-morphism-liquid-glass-and-sekuo-morphism-aesthetics-avoiding-blue-and-purple-color-schemes",
+      "title": "Design the main page with a visual style combining Clay Morphism, Glass Morphism, Liquid Glass, and Sekuo Morphism aesthetics, avoiding blue and purple color schemes",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-server-information-including-title-hellcod-mc-lifesteal-full-fun-experience-tagline-only-the-strong-survive-server-ip-hellcod-ddns-net-19100-game-mode-lifesteal-survival-availability-24-7-online-full-vps-performance-and-status-recently-launched-fresh-server",
+      "title": "Display server information including title 'HellCod MC Lifesteal – Full Fun Experience', tagline 'Only the Strong Survive', server IP 'hellcod.ddns.net:19100', game mode 'Lifesteal Survival', availability '24/7 Online – Full VPS Performance', and status 'Recently Launched – Fresh Server'",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-present-the-lifesteal-gameplay-concept-explaining-that-eliminating-a-player-steals-one-of-their-hearts-dying-causes-loss-of-one-heart-and-players-can-build-alliances-create-rivalries-dominate-wars-and-rise-to-the-top",
+      "title": "Present the Lifesteal gameplay concept explaining that eliminating a player steals one of their hearts, dying causes loss of one heart, and players can build alliances, create rivalries, dominate wars, and rise to the top",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-highlight-the-special-reward-that-the-first-player-to-reach-100m-in-game-money-will-receive-a-free-premium-account-and-mention-that-practice-pvp-mode-is-coming-soon",
+      "title": "Highlight the special reward that the first player to reach 100M in-game money will receive a FREE Premium Account, and mention that Practice PvP Mode is coming soon",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-call-to-action-messages-join-now-and-prove-your-strength-become-the-strongest-on-the-server-steal-hearts-rule-the-world-and-provide-a-link-to-discord-at-https-discord-gg-pqwapj3aqu",
+      "title": "Include call-to-action messages: 'Join now and prove your strength', 'Become the strongest on the server', 'Steal hearts. Rule the world', and provide a link to Discord at https://discord.gg/PqWapJ3AqU",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-powered-by-hellcod-team-attribution-in-the-footer-or-appropriate-location",
+      "title": "Display 'Powered by HellCod Team' attribution in the footer or appropriate location",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-scroll-animations-that-trigger-as-users-scroll-through-the-page-content",
+      "title": "Implement scroll animations that trigger as users scroll through the page content",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-hover-animations-to-interactive-elements-throughout-the-page",
+      "title": "Add hover animations to interactive elements throughout the page",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-custom-cursor-effect-that-enhances-the-visual-experience-throughout-the-website",
+      "title": "Implement a custom cursor effect that enhances the visual experience throughout the website",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-generated-background-and-decorative-images-as-static-assets-in-frontend-public-assets-generated-to-support-the-morphism-design-aesthetic",
+      "title": "Render generated background and decorative images as static assets in frontend/public/assets/generated to support the morphism design aesthetic",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-full-mobile-responsiveness-across-all-components-introsequence-herosection-gameplaysection-rewardssection-calltoaction-footer-with-breakpoints-for-small-mobile-320px-mobile-640px-tablet-768px-and-desktop-1024px",
+      "title": "Implement full mobile responsiveness across all components (IntroSequence, HeroSection, GameplaySection, RewardsSection, CallToAction, Footer) with breakpoints for small mobile (320px), mobile (640px), tablet (768px), and desktop (1024px+)",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-dark-crimson-obsidian-color-palette-with-a-light-and-loveable-color-theme-featuring-soft-pastels-warm-tones-or-cheerful-colors-that-maintain-good-contrast-and-readability-while-preserving-the-morphism-design-aesthetic",
+      "title": "Replace the current dark crimson/obsidian color palette with a light and loveable color theme featuring soft pastels, warm tones, or cheerful colors that maintain good contrast and readability while preserving the morphism design aesthetic",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-main-background-color-to-yellow-while-maintaining-good-contrast-and-readability-across-all-components",
+      "title": "Change the main background color to yellow while maintaining good contrast and readability across all components",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-entire-color-theme-to-convey-royalty-perfection-fun-and-inviting-qualities-using-colors-like-gold-purple-deep-blue-bright-accents-while-keeping-the-yellow-background",
+      "title": "Update the entire color theme to convey royalty, perfection, fun and inviting qualities using colors like gold, purple, deep blue, bright accents while keeping the yellow background",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-src-index-css-and-frontend-tailwind-config-js-to-implement-the-new-yellow-background-with-royal-color-theme-across-all-css-custom-properties-and-tailwind-configuration",
+      "title": "Update frontend/src/index.css and frontend/tailwind.config.js to implement the new yellow background with royal color theme across all CSS custom properties and Tailwind configuration",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-teddy-bear-background-image-or-decorative-element-from-the-website",
+      "title": "Remove the teddy bear background image or decorative element from the website",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-background-with-a-smooth-gradient-sky-background-transitioning-from-deep-blue-to-pale-sky-blue-non-pixelated-and-modern-covering-the-entire-page",
+      "title": "Replace the current background with a smooth gradient sky background transitioning from deep blue to pale sky blue, non-pixelated and modern, covering the entire page",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-overlay-crisp-pixel-art-white-clouds-with-hard-square-edges-on-the-gradient-background-with-clouds-moving-horizontally-from-left-to-right-at-a-slow-steady-speed-and-very-small-up-and-down-movement-in-discrete-pixel-steps-creating-a-subtle-retro-8-bit-floating-effect-implementing-seamless-looping-animation",
+      "title": "Overlay crisp pixel-art white clouds with hard square edges on the gradient background, with clouds moving horizontally from left to right at a slow steady speed and very small up-and-down movement in discrete pixel steps creating a subtle retro 8-bit floating effect, implementing seamless looping animation",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-bold-voxel-style-3d-text-logo-displaying-hellcod-hc-in-the-top-left-corner-of-the-page-visible-at-all-times-featuring-large-cubic-extruded-letters-with-smooth-blue-gradient-on-front-faces-darker-blue-shading-on-sides-subtle-pixel-square-texture-detailing-and-thick-deep-indigo-outline",
+      "title": "Add a bold voxel-style 3D text logo displaying 'HELLCOD HC' in the top left corner of the page, visible at all times, featuring large cubic extruded letters with smooth blue gradient on front faces, darker blue shading on sides, subtle pixel-square texture detailing, and thick deep indigo outline",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-card-components-in-gameplaysection-and-rewardssection-to-match-the-blue-aqua-vibe-with-colors-and-styling-that-complement-the-blue-gradient-background-and-overall-theme",
+      "title": "Update all card components (in GameplaySection and RewardsSection) to match the blue/aqua vibe with colors and styling that complement the blue gradient background and overall theme",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-color-theme-throughout-the-entire-website-including-tailwind-configuration-and-css-custom-properties-to-use-blue-aqua-colors-that-complement-the-new-gradient-background-replacing-the-current-royal-yellow-theme",
+      "title": "Update the color theme throughout the entire website (including Tailwind configuration and CSS custom properties) to use blue/aqua colors that complement the new gradient background, replacing the current royal yellow theme",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-generated-pixel-art-clouds-image-and-hellcod-hc-logo-image-as-static-assets-in-frontend-public-assets-generated",
+      "title": "Render the generated pixel-art clouds image and HELLCOD HC logo image as static assets in frontend/public/assets/generated",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-information-section-explaining-that-the-server-has-a-shop-for-premium-items-and-crate-keys-and-that-users-must-join-the-discord-server-to-purchase-these-items",
+      "title": "Add a new information section explaining that the server has a shop for premium items and crate keys, and that users must join the Discord server to purchase these items",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-cloudsbackground-component-completely-from-the-application-including-removing-it-from-app-tsx-and-deleting-the-component-file",
+      "title": "Remove the CloudsBackground component completely from the application, including removing it from App.tsx and deleting the component file",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-gradient-sky-background-with-the-user-provided-background-image-minecraft-sky-background-png-as-a-static-asset-in-frontend-public-assets-generated-applying-it-to-the-body-or-main-container",
+      "title": "Replace the current gradient sky background with the user-provided background image (minecraft-sky-background.png) as a static asset in frontend/public/assets/generated, applying it to the body or main container",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-user-provided-logo-and-background-images-as-static-assets-in-frontend-public-assets-generated-directory",
+      "title": "Render the user-provided logo and background images as static assets in frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-sitelogo-component-completely-from-the-application-by-removing-it-from-app-tsx-and-deleting-the-frontend-src-components-sitelogo-tsx-file",
+      "title": "Remove the SiteLogo component completely from the application by removing it from App.tsx and deleting the frontend/src/components/SiteLogo.tsx file",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-font-families-throughout-the-website-with-minecraft-s-official-font-mojangles-or-minecraft-seven-font-by-updating-frontend-tailwind-config-js-font-family-configuration-and-frontend-src-index-css-to-import-and-apply-the-minecraft-font-to-all-text-elements",
+      "title": "Replace all font families throughout the website with Minecraft's official font (Mojangles or Minecraft Seven font) by updating frontend/tailwind.config.js font family configuration and frontend/src/index.css to import and apply the Minecraft font to all text elements",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-text-colors-throughout-the-website-to-use-lighter-and-more-saturated-tones-of-blue-with-higher-contrast-against-the-minecraft-sky-background-to-ensure-all-text-is-clearly-visible-and-readable",
+      "title": "Update all text colors throughout the website to use lighter and more saturated tones of blue with higher contrast against the Minecraft sky background to ensure all text is clearly visible and readable",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-card-components-in-gameplaysection-rewardssection-and-shopinfosection-to-use-different-more-contrasting-tones-of-blue-for-backgrounds-borders-and-text-to-improve-visibility-against-the-minecraft-sky-background-while-maintaining-the-morphism-design-aesthetic",
+      "title": "Update all card components in GameplaySection, RewardsSection, and ShopInfoSection to use different, more contrasting tones of blue for backgrounds, borders, and text to improve visibility against the Minecraft sky background while maintaining the morphism design aesthetic",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-existing-hellcodmc-logo-from-the-top-left-corner-by-deleting-the-sitelogo-component-references-and-file",
+      "title": "Remove the existing HellCodMC logo from the top-left corner by deleting the SiteLogo component references and file",
+      "reqIds": [
+        "REQ-38"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-header-component-with-a-clean-minimal-semi-transparent-navigation-bar-featuring-glassmorphism-styling-with-soft-blur-low-opacity-background-and-navigation-items-with-smooth-hover-glow-effects-in-bright-cyan-or-soft-purple-with-gentle-transition-animations",
+      "title": "Create a new Header component with a clean, minimal, semi-transparent navigation bar featuring glassmorphism styling with soft blur, low-opacity background, and navigation items with smooth hover glow effects in bright cyan or soft purple with gentle transition animations",
+      "reqIds": [
+        "REQ-39"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-background-with-a-smooth-vertical-gradient-transitioning-from-rich-medium-blue-at-the-top-to-soft-light-sky-blue-at-the-bottom-ensuring-the-gradient-is-clean-and-non-pixelated",
+      "title": "Replace the current background with a smooth vertical gradient transitioning from rich medium blue at the top to soft light sky blue at the bottom, ensuring the gradient is clean and non-pixelated",
+      "reqIds": [
+        "REQ-40"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-overlay-crisp-pixelated-minecraft-style-white-clouds-with-sharp-square-edges-that-drift-slowly-from-left-to-right-in-a-seamless-loop-moving-in-a-gentle-wave-motion-with-very-slight-stepped-up-and-down-pixel-movement-keeping-the-sky-smooth-while-clouds-remain-distinctly-blocky",
+      "title": "Overlay crisp, pixelated Minecraft-style white clouds with sharp square edges that drift slowly from left to right in a seamless loop, moving in a gentle wave motion with very slight stepped up-and-down pixel movement, keeping the sky smooth while clouds remain distinctly blocky",
+      "reqIds": [
+        "REQ-41"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-hero-section-as-a-centered-layout-with-strong-visual-hierarchy-and-balanced-spacing-featuring-a-premium-glassmorphism-server-ip-card-with-semi-transparent-dark-blue-background-soft-background-blur-effect-rounded-corners-subtle-low-opacity-white-border-and-soft-layered-shadow-for-depth-separation",
+      "title": "Redesign the hero section as a centered layout with strong visual hierarchy and balanced spacing, featuring a premium glassmorphism server IP card with semi-transparent dark blue background, soft background blur effect, rounded corners, subtle low-opacity white border, and soft layered shadow for depth separation",
+      "reqIds": [
+        "REQ-42"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-subtle-animated-cyan-glow-with-smooth-pulsing-effect-to-the-server-ip-text-within-the-hero-card",
+      "title": "Add a subtle animated cyan glow with smooth pulsing effect to the server IP text within the hero card",
+      "reqIds": [
+        "REQ-43"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-a-minimal-copy-to-clipboard-button-with-a-clean-minecraft-inspired-pixel-icon-and-hover-feedback-animation-in-the-server-ip-card",
+      "title": "Include a minimal copy-to-clipboard button with a clean Minecraft-inspired pixel icon and hover feedback animation in the server IP card",
+      "reqIds": [
+        "REQ-44"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-three-floating-modern-content-cards-below-the-hero-card-displaying-game-mode-lifesteal-smp-version-any-version-can-play-and-user-support-both-java-and-bedrock-with-hover-animations-including-slight-lift-effect-soft-glow-and-subtle-scale-increase-maintaining-consistent-spacing-and-alignment",
+      "title": "Create three floating modern content cards below the hero card displaying 'Game Mode: Lifesteal SMP', 'Version: Any Version Can Play', and 'User Support: Both Java and Bedrock' with hover animations including slight lift effect, soft glow, and subtle scale increase, maintaining consistent spacing and alignment",
+      "reqIds": [
+        "REQ-45"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-typography-throughout-the-site-with-primary-headings-in-pure-white-secondary-body-text-in-soft-icy-blue-and-accent-phrases-highlighted-in-bright-cyan-or-soft-purple",
+      "title": "Update typography throughout the site with primary headings in pure white, secondary body text in soft icy blue, and accent phrases highlighted in bright cyan or soft purple",
+      "reqIds": [
+        "REQ-46"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-floating-primary-action-button-labeled-join-now-that-combines-a-subtle-minecraft-pixel-aesthetic-with-modern-ui-polish-including-soft-hover-glow-smooth-transitions-and-a-gentle-bounce-animation-for-visual-engagement",
+      "title": "Add a floating primary action button labeled 'Join Now' that combines a subtle Minecraft pixel aesthetic with modern UI polish, including soft hover glow, smooth transitions, and a gentle bounce animation for visual engagement",
+      "reqIds": [
+        "REQ-47"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-full-responsive-layout-optimization-for-mobile-320px-640px-tablet-768px-and-desktop-1024px-breakpoints-with-strong-contrast-accessibility-standards-and-seamless-animations-across-all-device-types",
+      "title": "Ensure full responsive layout optimization for mobile (320px, 640px), tablet (768px), and desktop (1024px+) breakpoints with strong contrast, accessibility standards, and seamless animations across all device types",
+      "reqIds": [
+        "REQ-48"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-introsequence-component-and-its-associated-state-management-from-app-tsx-to-eliminate-the-black-screen-intro-animation",
+      "title": "Remove the IntroSequence component and its associated state management from App.tsx to eliminate the black screen intro animation",
+      "reqIds": [
+        "REQ-49"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-header-component-to-be-rendered-at-the-top-of-app-tsx-replacing-or-preceding-existing-content",
+      "title": "Update the Header component to be rendered at the top of App.tsx, replacing or preceding existing content",
+      "reqIds": [
+        "REQ-50"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-src-index-css-to-remove-the-minecraft-sky-background-image-and-apply-the-smooth-blue-vertical-gradient-instead",
+      "title": "Update frontend/src/index.css to remove the Minecraft sky background image and apply the smooth blue vertical gradient instead",
+      "reqIds": [
+        "REQ-51"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-tailwind-config-js-to-include-cyan-soft-purple-icy-blue-and-appropriate-blue-shades-that-match-the-new-design-direction-for-use-throughout-components",
+      "title": "Update frontend/tailwind.config.js to include cyan, soft purple, icy blue, and appropriate blue shades that match the new design direction for use throughout components",
+      "reqIds": [
+        "REQ-52"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Black screen intro with animated welcome text",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Main page with Clay/Glass/Liquid Glass/Sekuo morphism design styles",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Scroll animations throughout the page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Hover animations on interactive elements",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Custom cursor effect",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Mobile-responsive design",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Remove teddy bear background element",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Blue/aqua gradient sky background with pixel-art clouds moving horizontally with 8-bit floating effect",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Card design matching blue/aqua vibe",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "HELLCOD HC voxel-style 3D logo in top left, visible at all times",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Add shop information explaining premium items and crate keys are available via Discord server",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Remove pixel-art cloud animation completely from background",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Fix logo - user will provide replacement logo image and background image",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Update the Discord link throughout the website to https://discord.gg/PqWapJ3AqU in all components where it appears (CallToAction, Footer)",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Replace the current SiteLogo component image source with the user-provided logo image (hellcod-hc-logo.png) as a static asset in frontend/public/assets/generated",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Remove the logo from the site completely",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Use Minecraft font throughout the website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Adjust text and card colors to different tones of blue for better visibility",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Diagnose and resolve the deployment error that occurred during the most recent build attempt",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Verify that the backend/main.mo actor compiles correctly and contains valid Motoko syntax",
+      "reqIds": [
+        "REQ-35"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Ensure all frontend component imports and file references are valid and point to existing files",
+      "reqIds": [
+        "REQ-36"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Validate that all required static assets referenced in the application exist in frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-37"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Remove existing HellCodMC logo from top-left corner",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Redesign header with clean minimal semi-transparent glassmorphism navigation bar with soft blur and hover glow effects (cyan/purple)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-29",
+      "summary": "Smooth vertical gradient background (medium blue to light sky blue) with crisp pixelated Minecraft clouds drifting left-to-right with gentle wave motion",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-30",
+      "summary": "Centered hero section with premium glassmorphism server IP card featuring animated cyan glow and copy-to-clipboard button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-31",
+      "summary": "Three floating modern content cards (Game Mode: Lifesteal SMP, Version: Any Version Can Play, User Support: Java and Bedrock) with hover lift/glow/scale animations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-32",
+      "summary": "Typography update: pure white primary headings, soft icy blue body text, bright cyan/purple accents",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-33",
+      "summary": "Floating 'Join Now' primary action button with Minecraft pixel aesthetic, hover glow, and gentle bounce animation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-34",
+      "summary": "Ensure full responsive layout optimization for mobile, tablet, and desktop with strong contrast and accessibility",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "HellCod MC Lifesteal Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

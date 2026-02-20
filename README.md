@@ -1,2 +1,3 @@
-# hellcod-mc-lifesteal-website
-Exported from Caffeine project: HellCod MC Lifesteal Website
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

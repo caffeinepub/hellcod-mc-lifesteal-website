@@ -1,0 +1,288 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-remove-the-existing-hellcodmc-logo-from-the-top-left-corner-by-deleting-the-sitelogo-component-references-and-file",
+      "featureTitle": "Remove the existing HellCodMC logo from the top-left corner by deleting the SiteLogo component references and file",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteLogo.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-38"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-new-header-component-with-a-clean-minimal-semi-transparent-navigation-bar-featuring-glassmorphism-styling-with-soft-blur-low-opacity-background-and-navigation-items-with-smooth-hover-glow-effects-in-bright-cyan-or-soft-purple-with-gentle-transition-animations",
+      "featureTitle": "Create a new Header component with a clean, minimal, semi-transparent navigation bar featuring glassmorphism styling with soft blur, low-opacity background, and navigation items with smooth hover glow effects in bright cyan or soft purple with gentle transition animations",
+      "files": [
+        "frontend/src/components/Header.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-39"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-the-current-background-with-a-smooth-vertical-gradient-transitioning-from-rich-medium-blue-at-the-top-to-soft-light-sky-blue-at-the-bottom-ensuring-the-gradient-is-clean-and-non-pixelated",
+      "featureTitle": "Replace the current background with a smooth vertical gradient transitioning from rich medium blue at the top to soft light sky blue at the bottom, ensuring the gradient is clean and non-pixelated",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-40"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-overlay-crisp-pixelated-minecraft-style-white-clouds-with-sharp-square-edges-that-drift-slowly-from-left-to-right-in-a-seamless-loop-moving-in-a-gentle-wave-motion-with-very-slight-stepped-up-and-down-pixel-movement-keeping-the-sky-smooth-while-clouds-remain-distinctly-blocky",
+      "featureTitle": "Overlay crisp, pixelated Minecraft-style white clouds with sharp square edges that drift slowly from left to right in a seamless loop, moving in a gentle wave motion with very slight stepped up-and-down pixel movement, keeping the sky smooth while clouds remain distinctly blocky",
+      "files": [
+        "frontend/src/components/CloudsBackground.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-41"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-hero-section-as-a-centered-layout-with-strong-visual-hierarchy-and-balanced-spacing-featuring-a-premium-glassmorphism-server-ip-card-with-semi-transparent-dark-blue-background-soft-background-blur-effect-rounded-corners-subtle-low-opacity-white-border-and-soft-layered-shadow-for-depth-separation",
+      "featureTitle": "Redesign the hero section as a centered layout with strong visual hierarchy and balanced spacing, featuring a premium glassmorphism server IP card with semi-transparent dark blue background, soft background blur effect, rounded corners, subtle low-opacity white border, and soft layered shadow for depth separation",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-42"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-subtle-animated-cyan-glow-with-smooth-pulsing-effect-to-the-server-ip-text-within-the-hero-card",
+      "featureTitle": "Add a subtle animated cyan glow with smooth pulsing effect to the server IP text within the hero card",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-43"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-a-minimal-copy-to-clipboard-button-with-a-clean-minecraft-inspired-pixel-icon-and-hover-feedback-animation-in-the-server-ip-card",
+      "featureTitle": "Include a minimal copy-to-clipboard button with a clean Minecraft-inspired pixel icon and hover feedback animation in the server IP card",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-44"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-three-floating-modern-content-cards-below-the-hero-card-displaying-game-mode-lifesteal-smp-version-any-version-can-play-and-user-support-both-java-and-bedrock-with-hover-animations-including-slight-lift-effect-soft-glow-and-subtle-scale-increase-maintaining-consistent-spacing-and-alignment",
+      "featureTitle": "Create three floating modern content cards below the hero card displaying 'Game Mode: Lifesteal SMP', 'Version: Any Version Can Play', and 'User Support: Both Java and Bedrock' with hover animations including slight lift effect, soft glow, and subtle scale increase, maintaining consistent spacing and alignment",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-45"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-typography-throughout-the-site-with-primary-headings-in-pure-white-secondary-body-text-in-soft-icy-blue-and-accent-phrases-highlighted-in-bright-cyan-or-soft-purple",
+      "featureTitle": "Update typography throughout the site with primary headings in pure white, secondary body text in soft icy blue, and accent phrases highlighted in bright cyan or soft purple",
+      "files": [
+        "frontend/src/components/CallToAction.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/GameplaySection.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/RewardsSection.tsx",
+        "frontend/src/components/ShopInfoSection.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-46"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-floating-primary-action-button-labeled-join-now-that-combines-a-subtle-minecraft-pixel-aesthetic-with-modern-ui-polish-including-soft-hover-glow-smooth-transitions-and-a-gentle-bounce-animation-for-visual-engagement",
+      "featureTitle": "Add a floating primary action button labeled 'Join Now' that combines a subtle Minecraft pixel aesthetic with modern UI polish, including soft hover glow, smooth transitions, and a gentle bounce animation for visual engagement",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-47"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-full-responsive-layout-optimization-for-mobile-320px-640px-tablet-768px-and-desktop-1024px-breakpoints-with-strong-contrast-accessibility-standards-and-seamless-animations-across-all-device-types",
+      "featureTitle": "Ensure full responsive layout optimization for mobile (320px, 640px), tablet (768px), and desktop (1024px+) breakpoints with strong contrast, accessibility standards, and seamless animations across all device types",
+      "files": [
+        "frontend/src/components/CallToAction.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/GameplaySection.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/RewardsSection.tsx",
+        "frontend/src/components/ShopInfoSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-48"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-introsequence-component-and-its-associated-state-management-from-app-tsx-to-eliminate-the-black-screen-intro-animation",
+      "featureTitle": "Remove the IntroSequence component and its associated state management from App.tsx to eliminate the black screen intro animation",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-49"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-header-component-to-be-rendered-at-the-top-of-app-tsx-replacing-or-preceding-existing-content",
+      "featureTitle": "Update the Header component to be rendered at the top of App.tsx, replacing or preceding existing content",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-50"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-frontend-src-index-css-to-remove-the-minecraft-sky-background-image-and-apply-the-smooth-blue-vertical-gradient-instead",
+      "featureTitle": "Update frontend/src/index.css to remove the Minecraft sky background image and apply the smooth blue vertical gradient instead",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-51"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-frontend-tailwind-config-js-to-include-cyan-soft-purple-icy-blue-and-appropriate-blue-shades-that-match-the-new-design-direction-for-use-throughout-components",
+      "featureTitle": "Update frontend/tailwind.config.js to include cyan, soft purple, icy blue, and appropriate blue shades that match the new design direction for use throughout components",
+      "files": [
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-52"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
