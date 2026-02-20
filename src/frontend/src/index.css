@@ -5,68 +5,109 @@
 @layer base {
     :root {
         --radius: 1.5rem;
-        /* Modern Blue Gradient Color System */
-        --background: 0.85 0.08 220;
-        --foreground: 0.98 0.02 200;
-        --card: 0.75 0.12 210;
-        --card-foreground: 0.98 0.02 200;
-        --popover: 0.78 0.10 215;
-        --popover-foreground: 0.98 0.02 200;
-        --primary: 0.70 0.15 200;
-        --primary-foreground: 0.98 0.02 200;
-        --secondary: 0.65 0.12 190;
-        --secondary-foreground: 0.98 0.02 200;
-        --muted: 0.80 0.08 210;
-        --muted-foreground: 0.60 0.08 205;
-        --accent: 0.75 0.18 180;
-        --accent-foreground: 0.98 0.02 200;
+        /* Dark Purple Theme Color System (Night Mode) */
+        --background: 0.10 0.02 280;
+        --foreground: 0.98 0.01 280;
+        --card: 0.15 0.03 280;
+        --card-foreground: 0.98 0.01 280;
+        --popover: 0.12 0.03 280;
+        --popover-foreground: 0.98 0.01 280;
+        --primary: 0.60 0.20 280;
+        --primary-foreground: 0.98 0.01 280;
+        --secondary: 0.50 0.18 285;
+        --secondary-foreground: 0.98 0.01 280;
+        --muted: 0.20 0.03 280;
+        --muted-foreground: 0.70 0.05 280;
+        --accent: 0.65 0.22 280;
+        --accent-foreground: 0.98 0.01 280;
         --destructive: 0.60 0.20 15;
         --destructive-foreground: 0.98 0 0;
-        --border: 0.70 0.12 200 / 40%;
-        --input: 0.75 0.10 210 / 50%;
-        --ring: 0.70 0.15 200;
-        --chart-1: 0.70 0.15 200;
-        --chart-2: 0.65 0.12 190;
-        --chart-3: 0.60 0.14 180;
-        --chart-4: 0.75 0.18 180;
-        --chart-5: 0.80 0.10 210;
+        --border: 0.30 0.08 280 / 40%;
+        --input: 0.25 0.05 280 / 50%;
+        --ring: 0.60 0.20 280;
+        --chart-1: 0.60 0.20 280;
+        --chart-2: 0.55 0.18 285;
+        --chart-3: 0.50 0.16 290;
+        --chart-4: 0.65 0.22 280;
+        --chart-5: 0.70 0.15 275;
+    }
+
+    .light {
+        /* Light Purple Theme Color System (Day Mode) - Black text for readability */
+        --background: 0.98 0.01 280;
+        --foreground: 0.15 0.01 280;
+        --card: 0.96 0.01 280;
+        --card-foreground: 0.15 0.01 280;
+        --popover: 0.98 0.01 280;
+        --popover-foreground: 0.15 0.01 280;
+        --primary: 0.55 0.18 280;
+        --primary-foreground: 0.15 0.01 280;
+        --secondary: 0.60 0.16 285;
+        --secondary-foreground: 0.15 0.01 280;
+        --muted: 0.92 0.02 280;
+        --muted-foreground: 0.35 0.03 280;
+        --accent: 0.58 0.20 280;
+        --accent-foreground: 0.15 0.01 280;
+        --destructive: 0.60 0.20 15;
+        --destructive-foreground: 0.98 0 0;
+        --border: 0.85 0.03 280 / 60%;
+        --input: 0.90 0.02 280 / 70%;
+        --ring: 0.55 0.18 280;
+        --chart-1: 0.55 0.18 280;
+        --chart-2: 0.60 0.16 285;
+        --chart-3: 0.65 0.14 290;
+        --chart-4: 0.58 0.20 280;
+        --chart-5: 0.50 0.15 275;
     }
 
     .dark {
-        --background: 0.85 0.08 220;
-        --foreground: 0.98 0.02 200;
-        --card: 0.75 0.12 210;
-        --card-foreground: 0.98 0.02 200;
-        --popover: 0.78 0.10 215;
-        --popover-foreground: 0.98 0.02 200;
-        --primary: 0.70 0.15 200;
-        --primary-foreground: 0.98 0.02 200;
-        --secondary: 0.65 0.12 190;
-        --secondary-foreground: 0.98 0.02 200;
-        --muted: 0.80 0.08 210;
-        --muted-foreground: 0.60 0.08 205;
-        --accent: 0.75 0.18 180;
-        --accent-foreground: 0.98 0.02 200;
+        --background: 0.10 0.02 280;
+        --foreground: 0.98 0.01 280;
+        --card: 0.15 0.03 280;
+        --card-foreground: 0.98 0.01 280;
+        --popover: 0.12 0.03 280;
+        --popover-foreground: 0.98 0.01 280;
+        --primary: 0.60 0.20 280;
+        --primary-foreground: 0.98 0.01 280;
+        --secondary: 0.50 0.18 285;
+        --secondary-foreground: 0.98 0.01 280;
+        --muted: 0.20 0.03 280;
+        --muted-foreground: 0.70 0.05 280;
+        --accent: 0.65 0.22 280;
+        --accent-foreground: 0.98 0.01 280;
         --destructive: 0.60 0.20 15;
         --destructive-foreground: 0.98 0 0;
-        --border: 0.70 0.12 200 / 40%;
-        --input: 0.75 0.10 210 / 50%;
-        --ring: 0.70 0.15 200;
+        --border: 0.30 0.08 280 / 40%;
+        --input: 0.25 0.05 280 / 50%;
+        --ring: 0.60 0.20 280;
     }
 
     * {
         @apply border-border;
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
     }
     
     body {
         @apply text-foreground;
         background: linear-gradient(180deg, 
-            oklch(0.55 0.15 240) 0%, 
-            oklch(0.65 0.12 230) 50%, 
-            oklch(0.75 0.10 220) 100%
+            oklch(var(--background)) 0%, 
+            oklch(calc(var(--background) + 0.02) 0.03 280) 50%, 
+            oklch(var(--background)) 100%
         );
         background-attachment: fixed;
         min-height: 100vh;
+        transition: background 300ms ease;
+    }
+    
+    .light body {
+        background: linear-gradient(180deg, 
+            oklch(0.98 0.01 280) 0%, 
+            oklch(0.95 0.02 280) 50%, 
+            oklch(0.98 0.01 280) 100%
+        );
+        background-attachment: fixed;
     }
     
     /* Disable custom cursor on touch devices */
@@ -82,44 +123,52 @@
 }
 
 @layer utilities {
-    /* Scroll animations */
+    /* Scroll animations - optimized for performance */
     .fade-in-up {
         opacity: 0;
-        transform: translateY(40px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        transform: translate3d(0, 10px, 0);
+        transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: opacity, transform;
     }
     
     .fade-in-up.visible {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate3d(0, 0, 0);
     }
     
     .fade-in-left {
         opacity: 0;
-        transform: translateX(-40px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        transform: translate3d(-10px, 0, 0);
+        transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: opacity, transform;
     }
     
     .fade-in-left.visible {
         opacity: 1;
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
     
     .fade-in-right {
         opacity: 0;
-        transform: translateX(40px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        transform: translate3d(10px, 0, 0);
+        transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: opacity, transform;
     }
     
     .fade-in-right.visible {
         opacity: 1;
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
     
     .scale-in {
         opacity: 0;
-        transform: scale(0.8);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        transform: scale(0.95);
+        transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: opacity, transform;
     }
     
     .scale-in.visible {
@@ -141,7 +190,7 @@
     }
 }
 
-/* Animation keyframes */
+/* Animation keyframes - GPU accelerated */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -151,47 +200,204 @@
     }
 }
 
-@keyframes pulse-glow {
+@keyframes hero-text-reveal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 12px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes shimmer-sweep {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes float-subtle {
     0%, 100% {
-        filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.4));
+        transform: translate3d(0, 0, 0);
     }
     50% {
-        filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8));
+        transform: translate3d(0, -3px, 0);
     }
 }
 
-@keyframes pulse-text {
+@keyframes pulse-glow-purple {
     0%, 100% {
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
-                     0 0 20px rgba(0, 255, 255, 0.3);
+        filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.3));
     }
     50% {
-        text-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
-                     0 0 40px rgba(0, 255, 255, 0.5);
+        filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.6));
     }
 }
 
-@keyframes bounce-subtle {
+@keyframes pulse-text-purple {
     0%, 100% {
-        transform: translateY(0);
+        text-shadow: 0 0 8px rgba(168, 85, 247, 0.4),
+                     0 0 16px rgba(168, 85, 247, 0.2);
     }
     50% {
-        transform: translateY(-5px);
+        text-shadow: 0 0 16px rgba(168, 85, 247, 0.7),
+                     0 0 32px rgba(168, 85, 247, 0.4);
     }
 }
 
-.animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+@keyframes border-trace {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+    25% {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    50% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    75% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
 }
 
-.animate-pulse-text {
-    animation: pulse-text 2s ease-in-out infinite;
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
 }
 
-.animate-bounce-subtle {
-    animation: bounce-subtle 2s ease-in-out infinite;
+@keyframes glow-expand {
+    0% {
+        box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(168, 85, 247, 0.7), 0 0 50px rgba(168, 85, 247, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+    }
+}
+
+@keyframes checkmark-fade {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes text-brighten {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.5);
+    }
+}
+
+/* Animation classes */
+.animate-hero-text-reveal {
+    animation: hero-text-reveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: opacity, transform;
+}
+
+.animate-shimmer-sweep {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(168, 85, 247, 0.4) 50%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-sweep 1.5s ease-in-out 1;
+    will-change: background-position;
+}
+
+.animate-float-subtle {
+    animation: float-subtle 9s ease-in-out infinite;
+    will-change: transform;
+}
+
+.animate-pulse-glow-purple {
+    animation: pulse-glow-purple 2s ease-in-out infinite;
+}
+
+.animate-pulse-text-purple {
+    animation: pulse-text-purple 2s ease-in-out infinite;
+}
+
+.animate-border-trace {
+    animation: border-trace 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-ripple {
+    animation: ripple 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-glow-expand {
+    animation: glow-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-checkmark-fade {
+    animation: checkmark-fade 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-text-brighten {
+    animation: text-brighten 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 .animate-fade-in {
     animation: fadeIn 0.3s ease-out;
+}
+
+/* Border trace effect container */
+.border-trace-container {
+    position: relative;
+}
+
+.border-trace-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(168, 85, 247, 0.8), 
+        transparent
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.border-trace-container:hover::before {
+    opacity: 1;
+    animation: border-trace 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }

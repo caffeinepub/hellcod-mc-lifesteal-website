@@ -56,24 +56,18 @@ export default {
                     4: 'oklch(var(--chart-4))',
                     5: 'oklch(var(--chart-5))'
                 },
-                // Modern Minecraft-inspired color palette
-                cyan: {
-                    DEFAULT: 'oklch(0.75 0.20 195)',
-                    light: 'oklch(0.85 0.15 195)',
-                    dark: 'oklch(0.65 0.25 195)'
-                },
+                // Theme-aware purple colors
                 purple: {
-                    DEFAULT: 'oklch(0.65 0.20 290)',
-                    light: 'oklch(0.75 0.15 290)',
-                    dark: 'oklch(0.55 0.25 290)'
+                    DEFAULT: 'oklch(0.45 0.20 280 / <alpha-value>)',
+                    light: 'oklch(0.40 0.18 280 / <alpha-value>)',
+                    dark: 'oklch(0.35 0.22 285 / <alpha-value>)',
+                    glow: 'oklch(0.50 0.22 280 / <alpha-value>)'
                 },
-                'icy-blue': {
-                    DEFAULT: 'oklch(0.80 0.10 220)',
-                    light: 'oklch(0.90 0.08 220)',
-                    dark: 'oklch(0.70 0.12 220)'
-                },
-                'medium-blue': 'oklch(0.55 0.15 240)',
-                'light-sky-blue': 'oklch(0.75 0.10 220)'
+                'dark-bg': {
+                    DEFAULT: 'oklch(0.10 0.02 280)',
+                    light: 'oklch(0.15 0.03 280)',
+                    dark: 'oklch(0.08 0.02 280)'
+                }
             },
             borderRadius: {
                 lg: 'var(--radius)',
@@ -85,10 +79,10 @@ export default {
             },
             boxShadow: {
                 xs: '0 1px 2px 0 rgba(0,0,0,0.05)',
-                'glass': '0 8px 32px 0 rgba(0, 100, 200, 0.2)',
-                'glow': '0 0 20px rgba(0, 255, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.2)',
-                'glow-lg': '0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3)',
-                'glow-purple': '0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(168, 85, 247, 0.2)'
+                'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.4)',
+                'glow-purple': '0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(168, 85, 247, 0.2)',
+                'glow-purple-lg': '0 0 30px rgba(168, 85, 247, 0.5), 0 0 60px rgba(168, 85, 247, 0.3)',
+                'glow-purple-intense': '0 0 40px rgba(168, 85, 247, 0.6), 0 0 80px rgba(168, 85, 247, 0.4)'
             },
             fontFamily: {
                 sans: ['Inter', 'system-ui', 'sans-serif'],

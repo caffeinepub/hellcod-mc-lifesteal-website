@@ -1,312 +1,86 @@
 {
   "kind": "build_request",
-  "title": "Complete UI rework with glassmorphism navbar, gradient background with pixel clouds, and modern hero section",
+  "title": "Change all white text to black for readability in light mode",
   "projectName": "HellCod MC Lifesteal",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-38",
-      "text": "Remove the existing HellCodMC logo from the top-left corner by deleting the SiteLogo component references and file",
+      "id": "REQ-90",
+      "text": "Update all white text colors to black throughout the website for better readability against light backgrounds in light mode, including headings, body text, section titles, and all text elements in HeroSection, GameplaySection, RewardsSection, ShopInfoSection, CallToAction, and Footer components",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-latest"
         ],
         "quotes": [
-          "Remove the existing \"HellCodMC\" logo from the top-left corner"
+          "can u add more interesting animations and more interesting prospects?",
+          "as you can see the text in white (\"REWARDS\") is unreadable ,so make it black",
+          "yes change everything from white to black in the text and continue"
         ]
       },
       "acceptanceCriteria": [
-        "SiteLogo component is not rendered in App.tsx",
-        "frontend/src/components/SiteLogo.tsx file is deleted",
-        "No logo image appears in the top-left corner"
+        "All white text (#FFFFFF, rgb(255,255,255), or equivalent) is changed to black (#000000 or dark gray) in light mode",
+        "The 'Achievements' heading with 'REWARDS' text is clearly readable with black color",
+        "All section headings, body text, and descriptive text are black in light mode",
+        "Text maintains proper contrast and readability against the light purple/lavender backgrounds",
+        "Dark mode text colors remain unchanged (white text for dark backgrounds)"
       ]
     },
     {
-      "id": "REQ-39",
-      "text": "Create a new Header component with a clean, minimal, semi-transparent navigation bar featuring glassmorphism styling with soft blur, low-opacity background, and navigation items with smooth hover glow effects in bright cyan or soft purple with gentle transition animations",
+      "id": "REQ-91",
+      "text": "Update frontend/src/index.css to change all white text color CSS custom properties to black for light theme mode, ensuring proper contrast ratios",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-latest"
         ],
         "quotes": [
-          "redesign the header with a clean, minimal, semi-transparent navigation bar. The navbar should feature subtle glassmorphism styling with soft blur and low-opacity background. Navigation items must have smooth hover glow effects in bright cyan or soft purple, with gentle transition animations."
+          "yes change everything from white to black in the text and continue"
         ]
       },
       "acceptanceCriteria": [
-        "Header component exists at frontend/src/components/Header.tsx",
-        "Navigation bar uses glassmorphism with backdrop-blur and low opacity background",
-        "Navigation items have hover glow effects in cyan or purple",
-        "Smooth CSS transitions are applied to all interactive elements",
-        "Header is responsive across mobile, tablet, and desktop breakpoints"
+        "Light theme foreground color custom properties are set to black or dark gray",
+        "Card text colors in light mode use black for proper readability",
+        "Accent text colors maintain appropriate contrast in light mode",
+        "Dark theme text colors remain white for proper visibility on dark backgrounds"
       ]
     },
     {
-      "id": "REQ-40",
-      "text": "Replace the current background with a smooth vertical gradient transitioning from rich medium blue at the top to soft light sky blue at the bottom, ensuring the gradient is clean and non-pixelated",
+      "id": "REQ-92",
+      "text": "Update frontend/tailwind.config.js to define black text colors for light mode theme configuration, replacing white foreground colors",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-latest"
         ],
         "quotes": [
-          "The background should be a smooth vertical gradient transitioning from rich medium blue at the top to soft light sky blue at the bottom. The gradient must be clean and non-pixelated."
+          "yes change everything from white to black in the text and continue"
         ]
       },
       "acceptanceCriteria": [
-        "Background uses CSS gradient from medium blue to light sky blue",
-        "Gradient is smooth without pixelation or banding",
-        "Gradient covers the entire viewport and extends with page scroll"
-      ]
-    },
-    {
-      "id": "REQ-41",
-      "text": "Overlay crisp, pixelated Minecraft-style white clouds with sharp square edges that drift slowly from left to right in a seamless loop, moving in a gentle wave motion with very slight stepped up-and-down pixel movement, keeping the sky smooth while clouds remain distinctly blocky",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "Overlay crisp, pixelated Minecraft-style white clouds with sharp square edges. Clouds drift slowly from left to right in a seamless loop, moving in a gentle wave motion with very slight stepped up-and-down pixel movement. The sky remains smooth while the clouds remain distinctly blocky."
-        ]
-      },
-      "acceptanceCriteria": [
-        "Pixel-art clouds with hard square edges are overlaid on the gradient background",
-        "Clouds animate horizontally from left to right continuously",
-        "Clouds have subtle vertical wave motion in discrete pixel steps",
-        "Animation loops seamlessly without gaps or jumps",
-        "Clouds remain crisp and blocky against the smooth gradient"
-      ]
-    },
-    {
-      "id": "REQ-42",
-      "text": "Redesign the hero section as a centered layout with strong visual hierarchy and balanced spacing, featuring a premium glassmorphism server IP card with semi-transparent dark blue background, soft background blur effect, rounded corners, subtle low-opacity white border, and soft layered shadow for depth separation",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "Design a centered hero section with strong visual hierarchy and balanced spacing. In the center, include a premium glassmorphism server IP card featuring: – Semi-transparent dark blue background – Soft background blur effect – Rounded corners – Subtle low-opacity white border – Soft layered shadow for depth separation"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Hero section is centered with clear visual hierarchy",
-        "Server IP card uses glassmorphism with semi-transparent dark blue background",
-        "Card has backdrop-blur CSS effect applied",
-        "Card has rounded corners and subtle white border with low opacity",
-        "Soft layered shadow creates depth separation from background",
-        "Layout is responsive across all device sizes"
-      ]
-    },
-    {
-      "id": "REQ-43",
-      "text": "Add a subtle animated cyan glow with smooth pulsing effect to the server IP text within the hero card",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "The server IP text should have a subtle animated cyan glow with a smooth pulsing effect."
-        ]
-      },
-      "acceptanceCriteria": [
-        "Server IP text has cyan text-shadow or glow effect",
-        "Glow pulses smoothly using CSS animation",
-        "Animation loops continuously with appropriate timing"
-      ]
-    },
-    {
-      "id": "REQ-44",
-      "text": "Include a minimal copy-to-clipboard button with a clean Minecraft-inspired pixel icon and hover feedback animation in the server IP card",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "Include a minimal copy-to-clipboard button with a clean Minecraft-inspired pixel icon and hover feedback animation."
-        ]
-      },
-      "acceptanceCriteria": [
-        "Copy button exists next to or below the server IP",
-        "Button uses a Minecraft-style pixelated icon",
-        "Hover state provides visual feedback (color change, glow, or scale)",
-        "Button copies server IP to clipboard on click",
-        "Success feedback is shown after copying"
-      ]
-    },
-    {
-      "id": "REQ-45",
-      "text": "Create three floating modern content cards below the hero card displaying 'Game Mode: Lifesteal SMP', 'Version: Any Version Can Play', and 'User Support: Both Java and Bedrock' with hover animations including slight lift effect, soft glow, and subtle scale increase, maintaining consistent spacing and alignment",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "Below the hero card, add three floating modern content cards displaying: – Game Mode: Lifesteal SMP – Version: Any Version Can Play – User Support: Both Java and Bedrock. These cards should feature hover animations including a slight lift effect, soft glow, and subtle scale increase. Maintain consistent spacing and alignment."
-        ]
-      },
-      "acceptanceCriteria": [
-        "Three cards are displayed below the hero card",
-        "Cards show Game Mode, Version, and User Support information",
-        "Cards have consistent spacing and alignment",
-        "Hover state applies lift transform, glow effect, and scale increase",
-        "Cards are responsive and stack or resize appropriately on mobile"
-      ]
-    },
-    {
-      "id": "REQ-46",
-      "text": "Update typography throughout the site with primary headings in pure white, secondary body text in soft icy blue, and accent phrases highlighted in bright cyan or soft purple",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "Typography: – Primary headings in pure white – Secondary body text in soft icy blue – Accent phrases highlighted in bright cyan or soft purple"
-        ]
-      },
-      "acceptanceCriteria": [
-        "All primary headings (h1, h2) use pure white color",
-        "Body text and secondary text use soft icy blue",
-        "Accent text uses bright cyan or soft purple",
-        "Typography is updated in Tailwind config and applied consistently",
-        "Text maintains strong contrast against the blue gradient background"
-      ]
-    },
-    {
-      "id": "REQ-47",
-      "text": "Add a floating primary action button labeled 'Join Now' that combines a subtle Minecraft pixel aesthetic with modern UI polish, including soft hover glow, smooth transitions, and a gentle bounce animation for visual engagement",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "Add a floating primary action button labeled \"Join Now.\" The button should combine a subtle Minecraft pixel aesthetic with modern UI polish. Include soft hover glow, smooth transitions, and a gentle bounce animation for visual engagement."
-        ]
-      },
-      "acceptanceCriteria": [
-        "Join Now button is prominently displayed",
-        "Button has Minecraft-inspired pixel styling with modern polish",
-        "Hover state adds soft glow effect",
-        "Button has smooth CSS transitions",
-        "Gentle bounce animation enhances visual appeal",
-        "Button links to Discord server or appropriate destination"
-      ]
-    },
-    {
-      "id": "REQ-48",
-      "text": "Ensure full responsive layout optimization for mobile (320px, 640px), tablet (768px), and desktop (1024px+) breakpoints with strong contrast, accessibility standards, and seamless animations across all device types",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "remember to optimize it for other device types too like mobile ,tab etc",
-          "Ensure strong contrast, accessibility, responsive layout structure, premium gaming aesthetic, modern SaaS-level polish, minimal clutter, seamless animations, and professional UI design quality."
-        ]
-      },
-      "acceptanceCriteria": [
-        "Layout adapts smoothly to mobile (320px, 640px), tablet (768px), and desktop (1024px+)",
-        "Text remains readable at all breakpoints",
-        "Interactive elements are appropriately sized for touch on mobile",
-        "Animations perform smoothly on all devices",
-        "Color contrast meets WCAG accessibility standards",
-        "Navigation is usable on mobile devices"
-      ]
-    },
-    {
-      "id": "REQ-49",
-      "text": "Remove the IntroSequence component and its associated state management from App.tsx to eliminate the black screen intro animation",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ]
-      },
-      "acceptanceCriteria": [
-        "IntroSequence component is not rendered in App.tsx",
-        "showIntro state and sessionStorage logic are removed",
-        "Application loads directly to the main content without intro animation",
-        "frontend/src/components/IntroSequence.tsx file can be deleted or kept for reference"
-      ]
-    },
-    {
-      "id": "REQ-50",
-      "text": "Update the Header component to be rendered at the top of App.tsx, replacing or preceding existing content",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Header component is imported and rendered in App.tsx",
-        "Header appears at the top of the page layout",
-        "Header is visible on all pages/sections"
-      ]
-    },
-    {
-      "id": "REQ-51",
-      "text": "Update frontend/src/index.css to remove the Minecraft sky background image and apply the smooth blue vertical gradient instead",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Background image reference is removed from index.css",
-        "Vertical gradient from medium blue to light sky blue is applied to body or main container",
-        "Gradient covers entire viewport"
-      ]
-    },
-    {
-      "id": "REQ-52",
-      "text": "Update frontend/tailwind.config.js to include cyan, soft purple, icy blue, and appropriate blue shades that match the new design direction for use throughout components",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Tailwind config includes cyan color shades",
-        "Tailwind config includes soft purple color shades",
-        "Tailwind config includes icy blue color shades",
-        "Colors are organized and documented for consistent use"
+        "Tailwind theme configuration includes black text colors for light mode",
+        "foreground, card-foreground, and other text-related color tokens use black in light mode",
+        "Dark mode configuration retains white text colors",
+        "All theme color tokens properly support both light and dark modes"
       ]
     }
   ],
   "constraints": [
-    "Do not modify frontend/src/hooks/useInternetIdentity.ts",
-    "Do not modify frontend/src/hooks/useInternetIdentity.tsx",
-    "Do not modify frontend/src/hooks/useActor.ts",
-    "Do not modify frontend/src/main.tsx",
-    "Do not modify frontend/src/components/ui directory",
-    "Preserve the Discord link https://discord.gg/PqWapJ3AqU in all components",
-    "Maintain Minecraft font family throughout the site",
-    "Keep the single-actor backend architecture"
+    "Do not change dark mode text colors - only update light mode text colors",
+    "Maintain existing glassmorphism design aesthetic and card styling",
+    "Preserve all existing animations and interactive effects",
+    "Ensure WCAG AA contrast ratio compliance for all text",
+    "Do not modify backend/main.mo"
   ],
   "nonGoals": [
-    "Implementing backend functionality or data persistence",
-    "Adding real-time multiplayer features",
-    "Integrating external payment systems",
-    "Adding user authentication beyond Internet Identity",
-    "Creating additional pages or routes",
-    "Implementing server status checking or live player counts"
+    "Adding new animations or interactive features",
+    "Changing background colors or gradients",
+    "Modifying component structure or layout",
+    "Adding new sections or content",
+    "Changing font families or typography styles"
   ],
   "imageRequirements": {
-    "required": [
-      "Pixelated Minecraft-style white clouds with sharp square edges on transparent background for overlay animation (minecraft-clouds-pixel.dim_1920x400.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

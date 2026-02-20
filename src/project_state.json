@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 19,
-  "summary": "Minecraft Lifesteal server website (HellCod MC) with glassmorphism navbar, animated pixel-art clouds on smooth gradient background, premium glassmorphism server IP card, three floating content cards (game mode/version/support), responsive mobile-first design, and modern SaaS-level polish",
+  "projectStateVersion": 29,
+  "summary": "Minecraft Lifesteal server website (HellCod MC) with glassmorphism navbar, animated pixel-art clouds on smooth gradient background, premium glassmorphism server IP card, three floating content cards (game mode/version/support), responsive mobile-first design, modern SaaS-level polish, and premium subtle animations (hero text reveal, scroll-based section reveal, magnetic button effect, floating hero card idle animation, animated border trace on hover, copy IP micro-interaction, and mouse light effect in dark mode) with performance optimization",
   "architectural_notes": [
     "Website for Minecraft Lifesteal server promotion",
     "Server IP: hellcod.ddns.net:19100",
@@ -15,8 +15,7 @@
     "Glassmorphism styling throughout UI (navbar, cards, hero section)"
   ],
   "known_issues": [],
-  "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Pixelated Minecraft-style white clouds with sharp square edges on transparent background for overlay animation (minecraft-clouds-pixel.dim_1920x400.png)",
+  "isFixRequest": true,
   "existing_features": [
     {
       "id": "feature-create-a-black-screen-intro-sequence-that-displays-on-initial-page-load-with-the-text-welcome-player-unknown-get-ready-to-dive-into-the-world-of-lifesteal-with-hellcodmc-appearing-with-stylized-animation-followed-by-automatic-transition-to-the-main-page",
@@ -385,6 +384,198 @@
         "REQ-52"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-implement-hero-text-reveal-animation-on-the-main-hero-heading-with-smooth-fade-in-and-slight-upward-slide-10-15px-letters-appearing-sequentially-with-soft-easing-ease-out-cubic-bezier-and-accent-words-in-purple-having-a-subtle-glow-sweep-shimmer-effect-that-passes-across-them-once-on-initial-load",
+      "title": "Implement hero text reveal animation on the main hero heading with smooth fade-in and slight upward slide (10-15px), letters appearing sequentially with soft easing (ease-out cubic bezier), and accent words in purple having a subtle glow sweep shimmer effect that passes across them once on initial load",
+      "reqIds": [
+        "REQ-53"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-scroll-based-section-reveal-animations-where-content-cards-and-sections-fade-in-and-slightly-rise-8-12px-as-the-user-scrolls-them-into-view-using-smooth-easing-ease-out-for-a-premium-feel-with-no-dramatic-motion",
+      "title": "Implement scroll-based section reveal animations where content cards and sections fade in and slightly rise 8-12px as the user scrolls them into view, using smooth easing (ease-out) for a premium feel with no dramatic motion",
+      "reqIds": [
+        "REQ-54"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-magnetic-primary-button-effect-to-the-join-now-button-that-subtly-follows-the-mouse-cursor-within-a-small-radius-2-3px-maximum-intensifies-purple-glow-on-hover-and-triggers-a-soft-ripple-animation-with-brief-glow-expansion-on-click",
+      "title": "Add magnetic primary button effect to the 'Join Now' button that subtly follows the mouse cursor within a small radius (2-3px maximum), intensifies purple glow on hover, and triggers a soft ripple animation with brief glow expansion on click",
+      "reqIds": [
+        "REQ-55"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-floating-hero-card-idle-animation-on-the-main-server-ip-glassmorphism-card-with-very-slow-vertical-floating-motion-2-4px-vertical-movement-in-a-smooth-8-10-second-loop-with-motion-being-extremely-subtle",
+      "title": "Implement floating hero card idle animation on the main server IP glassmorphism card with very slow vertical floating motion (2-4px vertical movement) in a smooth 8-10 second loop, with motion being extremely subtle",
+      "reqIds": [
+        "REQ-56"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-animated-border-trace-on-hover-for-content-cards-where-a-thin-purple-border-line-animates-around-the-card-s-perimeter-as-if-being-drawn-when-the-user-hovers-over-the-card-with-clean-and-minimal-animation",
+      "title": "Add animated border trace on hover for content cards where a thin purple border line animates around the card's perimeter as if being drawn when the user hovers over the card, with clean and minimal animation",
+      "reqIds": [
+        "REQ-57"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-copy-ip-micro-interaction-where-clicking-the-copy-button-causes-the-server-ip-text-to-briefly-brighten-a-small-purple-checkmark-icon-to-fade-in-and-a-soft-outward-glow-pulse-to-expand-and-fade-smoothly",
+      "title": "Implement copy IP micro-interaction where clicking the copy button causes the server IP text to briefly brighten, a small purple checkmark icon to fade in, and a soft outward glow pulse to expand and fade smoothly",
+      "reqIds": [
+        "REQ-58"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-mouse-light-effect-in-dark-mode-with-a-subtle-radial-purple-spotlight-that-softly-follows-the-mouse-cursor-throughout-the-page-using-very-low-opacity-5-10-and-smoothly-blended-into-the-background-without-affecting-performance",
+      "title": "Implement mouse light effect in dark mode with a subtle radial purple spotlight that softly follows the mouse cursor throughout the page, using very low opacity (5-10%) and smoothly blended into the background without affecting performance",
+      "reqIds": [
+        "REQ-59"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-entire-website-color-theme-to-a-dark-mode-aesthetic-using-black-white-and-purple-tones-only-replacing-the-current-blue-cyan-color-scheme-throughout-all-components-tailwind-configuration-and-css-custom-properties",
+      "title": "Update the entire website color theme to a dark mode aesthetic using black, white, and purple tones only, replacing the current blue/cyan color scheme throughout all components, Tailwind configuration, and CSS custom properties",
+      "reqIds": [
+        "REQ-60"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-optimize-all-animations-for-performance-using-hardware-acceleration-css-transforms-will-change-properties-smooth-easing-curves-cubic-bezier-minimal-displacement-consistent-timing-and-ensure-no-animations-cause-lag-or-frame-drops-on-standard-hardware",
+      "title": "Optimize all animations for performance using hardware acceleration, CSS transforms, will-change properties, smooth easing curves (cubic-bezier), minimal displacement, consistent timing, and ensure no animations cause lag or frame drops on standard hardware",
+      "reqIds": [
+        "REQ-61"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-themetoggle-component-in-frontend-src-components-that-renders-a-switch-ui-element-allowing-users-to-toggle-between-day-light-mode-and-night-dark-mode",
+      "title": "Create a ThemeToggle component in frontend/src/components that renders a switch UI element allowing users to toggle between day (light) mode and night (dark) mode",
+      "reqIds": [
+        "REQ-62"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-theme-state-management-using-react-context-or-hooks-to-track-the-current-theme-day-or-night-and-persist-the-user-s-preference-in-localstorage",
+      "title": "Implement theme state management using React context or hooks to track the current theme (day or night) and persist the user's preference in localStorage",
+      "reqIds": [
+        "REQ-63"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-day-mode-color-palette-in-frontend-src-index-css-and-frontend-tailwind-config-js-with-light-background-colors-dark-text-colors-and-appropriate-purple-accent-colors-that-work-well-in-a-light-theme",
+      "title": "Define day mode color palette in frontend/src/index.css and frontend/tailwind.config.js with light background colors, dark text colors, and appropriate purple accent colors that work well in a light theme",
+      "reqIds": [
+        "REQ-64"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-src-index-css-to-apply-theme-specific-css-custom-properties-based-on-the-current-theme-state-switching-between-the-existing-dark-mode-colors-and-the-new-day-mode-colors",
+      "title": "Update frontend/src/index.css to apply theme-specific CSS custom properties based on the current theme state, switching between the existing dark mode colors and the new day mode colors",
+      "reqIds": [
+        "REQ-65"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-components-header-herosection-gameplaysection-rewardssection-shopinfosection-calltoaction-footer-to-use-theme-aware-styling-that-responds-to-the-current-theme-state-with-appropriate-colors-and-glassmorphism-effects-for-both-day-and-night-modes",
+      "title": "Update all components (Header, HeroSection, GameplaySection, RewardsSection, ShopInfoSection, CallToAction, Footer) to use theme-aware styling that responds to the current theme state with appropriate colors and glassmorphism effects for both day and night modes",
+      "reqIds": [
+        "REQ-66"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-mouselighteffect-component-to-disable-or-adapt-the-radial-purple-spotlight-effect-in-day-mode-as-it-is-designed-for-dark-mode-only",
+      "title": "Update MouseLightEffect component to disable or adapt the radial purple spotlight effect in day mode, as it is designed for dark mode only",
+      "reqIds": [
+        "REQ-67"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-position-the-themetoggle-component-in-the-header-component-in-a-visually-appropriate-location-e-g-top-right-corner-that-is-accessible-on-all-screen-sizes-including-mobile",
+      "title": "Position the ThemeToggle component in the Header component in a visually appropriate location (e.g., top-right corner) that is accessible on all screen sizes including mobile",
+      "reqIds": [
+        "REQ-68"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-all-existing-animations-hero-text-reveal-scroll-based-reveals-magnetic-button-floating-card-border-trace-copy-ip-micro-interaction-work-correctly-in-both-day-and-night-modes-with-appropriate-color-transitions",
+      "title": "Ensure all existing animations (hero text reveal, scroll-based reveals, magnetic button, floating card, border trace, copy IP micro-interaction) work correctly in both day and night modes with appropriate color transitions",
+      "reqIds": [
+        "REQ-69"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-cloudsbackground-component-import-and-usage-from-frontend-src-app-tsx-completely-as-the-component-was-marked-for-removal-but-is-still-being-referenced",
+      "title": "Remove the CloudsBackground component import and usage from frontend/src/App.tsx completely, as the component was marked for removal but is still being referenced",
+      "reqIds": [
+        "REQ-70"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-themecontext-import-and-usage-in-frontend-src-app-tsx-to-ensure-the-themeprovider-wraps-the-application-correctly-and-theme-state-is-accessible-to-all-child-components",
+      "title": "Fix the ThemeContext import and usage in frontend/src/App.tsx to ensure the ThemeProvider wraps the application correctly and theme state is accessible to all child components",
+      "reqIds": [
+        "REQ-73"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-verify-that-all-component-imports-in-frontend-src-app-tsx-point-to-existing-files-and-remove-any-imports-for-deleted-or-non-existent-components",
+      "title": "Verify that all component imports in frontend/src/App.tsx point to existing files and remove any imports for deleted or non-existent components",
+      "reqIds": [
+        "REQ-74"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-any-unused-imports-variables-or-code-blocks-throughout-all-frontend-components-to-eliminate-potential-initialization-issues",
+      "title": "Remove any unused imports, variables, or code blocks throughout all frontend components to eliminate potential initialization issues",
+      "reqIds": [
+        "REQ-85"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-themeprovider-from-themecontext-wraps-the-entire-application-in-frontend-src-main-tsx-or-frontend-src-app-tsx-so-theme-state-is-available-globally",
+      "title": "Ensure the ThemeProvider from ThemeContext wraps the entire application in frontend/src/main.tsx or frontend/src/App.tsx so theme state is available globally",
+      "reqIds": [
+        "REQ-87"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-src-index-css-to-change-all-white-text-color-css-custom-properties-to-black-for-light-theme-mode-ensuring-proper-contrast-ratios",
+      "title": "Update frontend/src/index.css to change all white text color CSS custom properties to black for light theme mode, ensuring proper contrast ratios",
+      "reqIds": [
+        "REQ-91"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-tailwind-config-js-to-define-black-text-colors-for-light-mode-theme-configuration-replacing-white-foreground-colors",
+      "title": "Update frontend/tailwind.config.js to define black text colors for light mode theme configuration, replacing white foreground colors",
+      "reqIds": [
+        "REQ-92"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -451,12 +642,6 @@
     {
       "id": "AR-13",
       "summary": "Add shop information explaining premium items and crate keys are available via Discord server",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-14",
-      "summary": "Remove pixel-art cloud animation completely from background",
       "reqIds": [],
       "status": "pending"
     },
@@ -578,6 +763,200 @@
       "id": "AR-34",
       "summary": "Ensure full responsive layout optimization for mobile, tablet, and desktop with strong contrast and accessibility",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-35",
+      "summary": "Add hero text reveal animation with smooth fade-in, upward slide, sequential letter appearance, and subtle purple glow sweep shimmer effect on accent words",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-36",
+      "summary": "Implement scroll-based section reveal with fade-in and slight rise (8-12px) for content cards and sections using smooth easing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-37",
+      "summary": "Add magnetic primary button effect to 'Join Now' button that subtly follows mouse within 2-3px radius, intensifies purple glow on hover, and triggers soft ripple animation with glow expansion on click",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-38",
+      "summary": "Implement floating hero card idle animation with very slow vertical movement (2-4px) in 8-10 second smooth loop for main server IP glass card",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-39",
+      "summary": "Add animated border trace on hover for content cards with thin purple border line animating around card perimeter",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-40",
+      "summary": "Implement copy IP micro-interaction that brightens server IP text, fades in small purple checkmark icon, and triggers soft outward glow pulse on copy button click",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-41",
+      "summary": "Add mouse light effect with subtle radial purple spotlight that softly follows mouse cursor in dark mode with very low opacity and smooth blending",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-42",
+      "summary": "Update color theme to dark mode aesthetic using black, white, and purple tones only throughout the website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-43",
+      "summary": "Optimize all animations for performance with smooth easing curves, minimal displacement, consistent timing, and hardware acceleration to prevent lag",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-44",
+      "summary": "Add a toggle switch to switch between night (dark) mode and day (light) mode",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-46",
+      "summary": "Delete the empty frontend/src/components/IntroSequence.tsx file completely from the codebase as it contains no content and is not being used",
+      "reqIds": [
+        "REQ-71"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-47",
+      "summary": "Delete the empty frontend/src/components/SiteLogo.tsx file completely from the codebase as it contains no content and was marked for removal",
+      "reqIds": [
+        "REQ-72"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-50",
+      "summary": "Fix any CSS parsing errors in frontend/src/index.css by validating all OKLCH color values, gradient syntax, and custom property declarations",
+      "reqIds": [
+        "REQ-75"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-51",
+      "summary": "Validate that the Tailwind configuration in frontend/tailwind.config.js has no syntax errors and all custom theme extensions are properly structured",
+      "reqIds": [
+        "REQ-76"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-52",
+      "summary": "Fix any TypeScript compilation errors in all frontend components by ensuring proper type definitions, import paths, and component prop types",
+      "reqIds": [
+        "REQ-77"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-53",
+      "summary": "Ensure the CustomCursor component only initializes on non-touch devices and does not cause rendering issues on mobile devices",
+      "reqIds": [
+        "REQ-78"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-54",
+      "summary": "Fix the MouseLightEffect component to ensure it initializes properly, responds to theme context correctly, and uses requestAnimationFrame efficiently without memory leaks",
+      "reqIds": [
+        "REQ-79"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-55",
+      "summary": "Verify that all scroll animation hooks (useScrollAnimation) are properly initialized and do not cause IntersectionObserver errors",
+      "reqIds": [
+        "REQ-80"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-56",
+      "summary": "Ensure the HeroSection component's magnetic button effect and ripple animations initialize correctly without blocking page render",
+      "reqIds": [
+        "REQ-81"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-57",
+      "summary": "Fix the hero text reveal animation to ensure it plays correctly on initial page load without causing render blocking",
+      "reqIds": [
+        "REQ-82"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-58",
+      "summary": "Validate that the Header component's mobile menu toggle, smooth scroll navigation, and ThemeToggle integration all function correctly",
+      "reqIds": [
+        "REQ-83"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-59",
+      "summary": "Ensure all section components (GameplaySection, RewardsSection, ShopInfoSection, CallToAction, Footer) render correctly with their scroll animations and theme-aware styling",
+      "reqIds": [
+        "REQ-84"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-61",
+      "summary": "Verify that frontend/src/main.tsx properly initializes React Query, Internet Identity provider, and renders the App component without errors",
+      "reqIds": [
+        "REQ-86"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-63",
+      "summary": "Validate that backend/main.mo compiles correctly as a valid empty Motoko actor and does not cause any deployment errors",
+      "reqIds": [
+        "REQ-88"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-64",
+      "summary": "Optimize all animation performance by ensuring proper use of CSS transforms, will-change properties, and requestAnimationFrame cleanup to prevent frame drops",
+      "reqIds": [
+        "REQ-89"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-65",
+      "summary": "Change all white text to black throughout the site for better readability on light backgrounds",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-66",
+      "summary": "Update all white text colors to black throughout the website for better readability against light backgrounds in light mode, including headings, body text, section titles, and all text elements in HeroSection, GameplaySection, RewardsSection, ShopInfoSection, CallToAction, and Footer components",
+      "reqIds": [
+        "REQ-90"
+      ],
       "status": "pending"
     }
   ],
