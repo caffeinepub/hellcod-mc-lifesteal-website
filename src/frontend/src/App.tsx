@@ -1,6 +1,8 @@
 import CustomCursor from './components/CustomCursor';
 import Header from './components/Header';
 import MouseLightEffect from './components/MouseLightEffect';
+import Stars from './components/Stars';
+import Moon from './components/Moon';
 import HeroSection from './components/HeroSection';
 import GameplaySection from './components/GameplaySection';
 import RewardsSection from './components/RewardsSection';
@@ -14,6 +16,8 @@ function App() {
     <ThemeProvider>
       <CustomCursor />
       <MouseLightEffect />
+      <Stars />
+      <Moon />
       <Header />
       <div className="relative min-h-screen overflow-x-hidden">
         <HeroSection />

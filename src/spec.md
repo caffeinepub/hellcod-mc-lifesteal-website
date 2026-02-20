@@ -1,12 +1,14 @@
 # Specification
 
 ## Summary
-**Goal:** Improve text readability in light mode by changing all white text to black.
+**Goal:** Restore the "HellCod MC" heading to the top of the hero section and add an image slideshow showcasing Minecraft server builds.
 
 **Planned changes:**
-- Update all white text colors to black in light mode across all components (HeroSection, GameplaySection, RewardsSection, ShopInfoSection, CallToAction, Footer)
-- Modify CSS custom properties in index.css to use black text for light theme
-- Update Tailwind configuration to define black foreground colors for light mode
-- Preserve white text colors for dark mode
+- Restore the "HellCod MC" heading at the top of the HeroSection component with white text and purple gradient effects
+- Create a new ImageSlideshow component that displays 6 Minecraft server build screenshots
+- Add automatic slideshow transitions (4-5 second intervals) with smooth fade effects
+- Include manual navigation controls (previous/next buttons) for the slideshow
+- Position the slideshow between the heading and the server IP card
+- Save the 6 uploaded Minecraft screenshots as static assets in frontend/public/assets/generated
 
-**User-visible outcome:** All text elements are clearly readable with black color against light backgrounds in light mode, particularly fixing the unreadable white "REWARDS" heading.
+**User-visible outcome:** Users will see the restored "HellCod MC" heading prominently at the top, followed by an automatic slideshow displaying 6 Minecraft server build screenshots with manual navigation controls, all positioned above the server IP card and content cards.

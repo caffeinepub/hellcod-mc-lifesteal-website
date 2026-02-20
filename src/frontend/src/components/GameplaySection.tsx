@@ -22,21 +22,21 @@ export default function GameplaySection() {
     {
       icon: '🛡️',
       title: 'Strategic Depth',
-      description: 'Plan your attacks, defend your base, and outsmart your opponents. Every decision can mean life or death.',
+      description: 'Plan your moves carefully. Every decision counts in this high-stakes survival experience.',
     },
   ];
 
   return (
-    <section id="gameplay" ref={ref} className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4">
+    <section id="gameplay" ref={ref} className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4 z-10">
       <div className="relative container mx-auto max-w-6xl">
         <div className={`space-y-12 sm:space-y-16 fade-in-up ${isVisible ? 'visible' : ''}`}>
           {/* Section Title */}
           <div className="text-center space-y-4 sm:space-y-6">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight">
-              How <span className="text-purple drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]">Lifesteal</span> Works
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
+              Gameplay <span className="text-purple drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]">Features</span>
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Master the art of survival in our unique Lifesteal SMP
+              Experience the thrill of Lifesteal SMP
             </p>
           </div>
 

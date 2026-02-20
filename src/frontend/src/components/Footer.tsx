@@ -5,7 +5,7 @@ export default function Footer() {
     : 'hellcod-mc';
 
   return (
-    <footer className="relative py-10 sm:py-12 md:py-16 border-t border-purple/20 backdrop-blur-md bg-card/60 px-4">
+    <footer className="relative py-10 sm:py-12 md:py-16 border-t border-purple/20 backdrop-blur-md bg-card/60 px-4 z-10">
       <div className="container mx-auto max-w-6xl">
         <div className="space-y-8 sm:space-y-10">
           {/* Main Footer Content */}

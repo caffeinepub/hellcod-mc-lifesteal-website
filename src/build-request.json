@@ -1,86 +1,110 @@
 {
   "kind": "build_request",
-  "title": "Change all white text to black for readability in light mode",
-  "projectName": "HellCod MC Lifesteal",
+  "title": "Restore HellCod MC Heading and Add Image Slideshow",
+  "projectName": "HellCod MC",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-90",
-      "text": "Update all white text colors to black throughout the website for better readability against light backgrounds in light mode, including headings, body text, section titles, and all text elements in HeroSection, GameplaySection, RewardsSection, ShopInfoSection, CallToAction, and Footer components",
+      "id": "REQ-103",
+      "text": "Restore the 'HellCod MC' heading to its prominent position at the top of the HeroSection component, using the existing typography styles (white text with purple gradient effects) and ensure it is visible above all other hero content",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-user-restore-heading"
         ],
         "quotes": [
-          "can u add more interesting animations and more interesting prospects?",
-          "as you can see the text in white (\"REWARDS\") is unreadable ,so make it black",
-          "yes change everything from white to black in the text and continue"
+          "yes restore the \"HellCod MC\" to ts prominent place"
         ]
       },
       "acceptanceCriteria": [
-        "All white text (#FFFFFF, rgb(255,255,255), or equivalent) is changed to black (#000000 or dark gray) in light mode",
-        "The 'Achievements' heading with 'REWARDS' text is clearly readable with black color",
-        "All section headings, body text, and descriptive text are black in light mode",
-        "Text maintains proper contrast and readability against the light purple/lavender backgrounds",
-        "Dark mode text colors remain unchanged (white text for dark backgrounds)"
+        "The 'HellCod MC' heading is displayed prominently at the top of the hero section",
+        "The heading uses white text with purple gradient effects matching the existing theme",
+        "The heading is visible in both light and dark modes with appropriate styling",
+        "The heading appears above the slideshow and server IP card"
       ]
     },
     {
-      "id": "REQ-91",
-      "text": "Update frontend/src/index.css to change all white text color CSS custom properties to black for light theme mode, ensuring proper contrast ratios",
+      "id": "REQ-104",
+      "text": "Create a new ImageSlideshow component in frontend/src/components that displays the 6 uploaded Minecraft server build screenshots with automatic slideshow transitions (4-5 second intervals), manual navigation controls (previous/next buttons), smooth fade transitions between images, and responsive sizing",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-user-slideshow-placement"
         ],
         "quotes": [
-          "yes change everything from white to black in the text and continue"
+          "there should be a slide show just before the hero cards and under the heading"
         ]
       },
       "acceptanceCriteria": [
-        "Light theme foreground color custom properties are set to black or dark gray",
-        "Card text colors in light mode use black for proper readability",
-        "Accent text colors maintain appropriate contrast in light mode",
-        "Dark theme text colors remain white for proper visibility on dark backgrounds"
+        "ImageSlideshow component renders all 6 Minecraft build images from frontend/public/assets/generated",
+        "Images automatically transition every 4-5 seconds with smooth fade effects",
+        "Manual navigation controls (previous/next arrows) allow users to browse images",
+        "Component is responsive and scales appropriately for mobile, tablet, and desktop",
+        "Slideshow styling matches the existing glassmorphism design aesthetic",
+        "Component works correctly in both light and dark theme modes"
       ]
     },
     {
-      "id": "REQ-92",
-      "text": "Update frontend/tailwind.config.js to define black text colors for light mode theme configuration, replacing white foreground colors",
+      "id": "REQ-105",
+      "text": "Position the ImageSlideshow component in the HeroSection component immediately after the restored 'HellCod MC' heading and before the existing server IP glassmorphism card and three content cards (Game Mode, Version, User Support)",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-user-slideshow-placement"
         ],
         "quotes": [
-          "yes change everything from white to black in the text and continue"
+          "there should be a slide show just before the hero cards and under the heading"
         ]
       },
       "acceptanceCriteria": [
-        "Tailwind theme configuration includes black text colors for light mode",
-        "foreground, card-foreground, and other text-related color tokens use black in light mode",
-        "Dark mode configuration retains white text colors",
-        "All theme color tokens properly support both light and dark modes"
+        "ImageSlideshow appears in the correct position: after the 'HellCod MC' heading and before the server IP card",
+        "The slideshow integrates seamlessly with existing hero section layout and spacing",
+        "The vertical hierarchy is: HellCod MC heading → slideshow → server IP card → three content cards",
+        "Component maintains proper spacing and alignment with surrounding elements"
+      ]
+    },
+    {
+      "id": "REQ-106",
+      "text": "Render the 6 uploaded Minecraft server build screenshots as static assets in frontend/public/assets/generated with appropriate filenames and ensure the ImageSlideshow component references these images correctly",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-upload-images"
+        ],
+        "quotes": [
+          "here are some pics i want u to include in my webpage"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 6 Minecraft build screenshots are saved as static assets in frontend/public/assets/generated",
+        "Images are named consistently (e.g., minecraft-build-1.png through minecraft-build-6.png)",
+        "ImageSlideshow component correctly references the image paths",
+        "Images load properly without 404 errors"
       ]
     }
   ],
   "constraints": [
-    "Do not change dark mode text colors - only update light mode text colors",
-    "Maintain existing glassmorphism design aesthetic and card styling",
-    "Preserve all existing animations and interactive effects",
-    "Ensure WCAG AA contrast ratio compliance for all text",
-    "Do not modify backend/main.mo"
+    "Do not modify the existing Stars, Moon, Header, CustomCursor, MouseLightEffect, or ThemeToggle components",
+    "Preserve all existing animations and theme-aware styling throughout the site",
+    "Maintain the current glassmorphism design aesthetic for the new slideshow component",
+    "Do not alter the existing three content cards (Game Mode, Version, User Support) or server IP card"
   ],
   "nonGoals": [
-    "Adding new animations or interactive features",
-    "Changing background colors or gradients",
-    "Modifying component structure or layout",
-    "Adding new sections or content",
-    "Changing font families or typography styles"
+    "Adding additional navigation pages or sections beyond the slideshow",
+    "Modifying the backend or adding any Motoko functionality",
+    "Changing the existing color theme or gradient backgrounds",
+    "Adding video content or animated GIFs to the slideshow",
+    "Implementing zoom, lightbox, or fullscreen image viewing features"
   ],
   "imageRequirements": {
-    "required": [],
+    "required": [
+      "Minecraft server build night scene with temple and palm trees (minecraft-build-1.dim_1920x1080.png)",
+      "Minecraft server build day scene with purple crystals and central temple (minecraft-build-2.dim_1920x1080.png)",
+      "Minecraft server build front view of main temple with player (minecraft-build-3.dim_1920x1080.png)",
+      "Minecraft server build day scene with purple crystals (minecraft-build-4.dim_1920x1080.png)",
+      "Minecraft server build front view of temple structure (minecraft-build-5.dim_1920x1080.png)",
+      "Minecraft server commands menu interface with red text (minecraft-build-6.dim_1920x1080.png)"
+    ],
     "edits": []
   }
 }

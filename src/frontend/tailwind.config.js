@@ -63,6 +63,18 @@ export default {
                     dark: 'oklch(0.35 0.22 285 / <alpha-value>)',
                     glow: 'oklch(0.50 0.22 280 / <alpha-value>)'
                 },
+                // Night mode gradient colors
+                'night-purple': {
+                    top: 'oklch(0.25 0.08 280)',
+                    mid: 'oklch(0.15 0.06 285)',
+                    bottom: 'oklch(0.08 0.04 280)'
+                },
+                // Day mode gradient colors
+                'day-aqua': {
+                    top: 'oklch(0.88 0.05 200)',
+                    mid: 'oklch(0.85 0.06 210)',
+                    bottom: 'oklch(0.82 0.07 200)'
+                },
                 'dark-bg': {
                     DEFAULT: 'oklch(0.10 0.02 280)',
                     light: 'oklch(0.15 0.03 280)',
@@ -97,35 +109,11 @@ export default {
                 'accordion-up': {
                     from: { height: 'var(--radix-accordion-content-height)' },
                     to: { height: '0' }
-                },
-                'clouds-scroll': {
-                    '0%': { transform: 'translate(0, 0)' },
-                    '25%': { transform: 'translate(480px, -8px)' },
-                    '50%': { transform: 'translate(960px, 0)' },
-                    '75%': { transform: 'translate(1440px, 8px)' },
-                    '100%': { transform: 'translate(1920px, 0)' }
-                },
-                'clouds-scroll-delayed': {
-                    '0%': { transform: 'translate(0, 0)' },
-                    '25%': { transform: 'translate(360px, 8px)' },
-                    '50%': { transform: 'translate(720px, 0)' },
-                    '75%': { transform: 'translate(1080px, -8px)' },
-                    '100%': { transform: 'translate(1440px, 0)' }
-                },
-                'clouds-scroll-slow': {
-                    '0%': { transform: 'translate(0, 0)' },
-                    '25%': { transform: 'translate(240px, 8px)' },
-                    '50%': { transform: 'translate(480px, 0)' },
-                    '75%': { transform: 'translate(720px, -8px)' },
-                    '100%': { transform: 'translate(960px, 0)' }
                 }
             },
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
-                'accordion-up': 'accordion-up 0.2s ease-out',
-                'clouds-scroll': 'clouds-scroll 60s linear infinite',
-                'clouds-scroll-delayed': 'clouds-scroll-delayed 75s linear infinite',
-                'clouds-scroll-slow': 'clouds-scroll-slow 90s linear infinite'
+                'accordion-up': 'accordion-up 0.2s ease-out'
             }
         }
     },

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Copy, Check, Gamepad2 } from 'lucide-react';
 import { SiDiscord } from 'react-icons/si';
+import ImageSlideshow from './ImageSlideshow';
 
 export default function HeroSection() {
   const [copied, setCopied] = useState(false);
@@ -78,60 +79,22 @@ export default function HeroSection() {
     };
   }, [isHovering]);
 
-  // Hero text reveal animation
-  const titleWords = ['Welcome', 'to', 'HellCod', 'MC'];
-  const subtitleWords = ['The', 'Ultimate', 'Lifesteal', 'SMP', 'Experience'];
-
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 sm:pt-24 pb-12 sm:pb-16 px-4">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 sm:pt-24 pb-12 sm:pb-16 px-4 z-10">
       <div className="relative z-10 container mx-auto max-w-6xl">
         <div className="flex flex-col items-center space-y-8 sm:space-y-12 md:space-y-16">
-          {/* Hero Title with reveal animation */}
-          <div className="text-center space-y-4 sm:space-y-6">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold text-foreground leading-tight px-2">
-              {titleWords.map((word, i) => (
-                <span
-                  key={i}
-                  className="inline-block animate-hero-text-reveal"
-                  style={{
-                    animationDelay: `${i * 0.1}s`,
-                    opacity: 0,
-                  }}
-                >
-                  {word === 'HellCod' ? (
-                    <span className="relative inline-block">
-                      <span className="text-purple drop-shadow-[0_0_20px_rgba(168,85,247,0.6)] animate-shimmer-sweep" style={{ animationDelay: '0.8s' }}>
-                        {word}
-                      </span>
-                    </span>
-                  ) : (
-                    word
-                  )}{' '}
-                </span>
-              ))}
+          {/* Main Heading - HellCod MC */}
+          <div className="text-center animate-hero-text-reveal" style={{ opacity: 0, animationDelay: '0s' }}>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold leading-tight px-2">
+              <span className="text-white drop-shadow-[0_0_30px_rgba(168,85,247,0.8)] animate-shimmer-sweep">
+                HellCod MC
+              </span>
             </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-foreground/80 font-medium leading-relaxed px-2">
-              {subtitleWords.map((word, i) => (
-                <span
-                  key={i}
-                  className="inline-block animate-hero-text-reveal"
-                  style={{
-                    animationDelay: `${0.4 + i * 0.08}s`,
-                    opacity: 0,
-                  }}
-                >
-                  {word === 'Lifesteal' ? (
-                    <span className="relative inline-block">
-                      <span className="text-purple font-bold animate-shimmer-sweep" style={{ animationDelay: '1.2s' }}>
-                        {word}
-                      </span>
-                    </span>
-                  ) : (
-                    word
-                  )}{' '}
-                </span>
-              ))}
-            </p>
+          </div>
+
+          {/* Image Slideshow */}
+          <div className="w-full animate-hero-text-reveal" style={{ opacity: 0, animationDelay: '0.2s' }}>
+            <ImageSlideshow />
           </div>
 
           {/* Server IP Card - Floating animation */}

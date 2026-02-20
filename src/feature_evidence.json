@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-frontend-src-index-css-to-change-all-white-text-color-css-custom-properties-to-black-for-light-theme-mode-ensuring-proper-contrast-ratios",
-      "featureTitle": "Update frontend/src/index.css to change all white text color CSS custom properties to black for light theme mode, ensuring proper contrast ratios",
+      "featureId": "feature-restore-the-hellcod-mc-heading-to-its-prominent-position-at-the-top-of-the-herosection-component-using-the-existing-typography-styles-white-text-with-purple-gradient-effects-and-ensure-it-is-visible-above-all-other-hero-content",
+      "featureTitle": "Restore the 'HellCod MC' heading to its prominent position at the top of the HeroSection component, using the existing typography styles (white text with purple gradient effects) and ensure it is visible above all other hero content",
       "files": [
-        "frontend/src/index.css"
+        "frontend/src/components/HeroSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,15 +15,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-91"
+        "REQ-103"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-update-frontend-tailwind-config-js-to-define-black-text-colors-for-light-mode-theme-configuration-replacing-white-foreground-colors",
-      "featureTitle": "Update frontend/tailwind.config.js to define black text colors for light mode theme configuration, replacing white foreground colors",
+      "featureId": "feature-create-a-new-imageslideshow-component-in-frontend-src-components-that-displays-the-6-uploaded-minecraft-server-build-screenshots-with-automatic-slideshow-transitions-4-5-second-intervals-manual-navigation-controls-previous-next-buttons-smooth-fade-transitions-between-images-and-responsive-sizing",
+      "featureTitle": "Create a new ImageSlideshow component in frontend/src/components that displays the 6 uploaded Minecraft server build screenshots with automatic slideshow transitions (4-5 second intervals), manual navigation controls (previous/next buttons), smooth fade transitions between images, and responsive sizing",
       "files": [
-        "frontend/tailwind.config.js"
+        "frontend/src/components/ImageSlideshow.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -33,7 +33,41 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-92"
+        "REQ-104"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-position-the-imageslideshow-component-in-the-herosection-component-immediately-after-the-restored-hellcod-mc-heading-and-before-the-existing-server-ip-glassmorphism-card-and-three-content-cards-game-mode-version-user-support",
+      "featureTitle": "Position the ImageSlideshow component in the HeroSection component immediately after the restored 'HellCod MC' heading and before the existing server IP glassmorphism card and three content cards (Game Mode, Version, User Support)",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-105"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-render-the-6-uploaded-minecraft-server-build-screenshots-as-static-assets-in-frontend-public-assets-generated-with-appropriate-filenames-and-ensure-the-imageslideshow-component-references-these-images-correctly",
+      "featureTitle": "Render the 6 uploaded Minecraft server build screenshots as static assets in frontend/public/assets/generated with appropriate filenames and ensure the ImageSlideshow component references these images correctly",
+      "files": [],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-106"
       ],
       "confidence": "high"
     }

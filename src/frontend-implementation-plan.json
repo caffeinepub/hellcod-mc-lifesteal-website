@@ -1,82 +1,100 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Change all white text to black for readability in light mode",
+  "title": "Restore HellCod MC Heading and Add Image Slideshow",
   "requirements": [
     {
-      "id": "REQ-90",
-      "summary": "Update all white text colors to black throughout the website for better readability against light backgrounds in light mode",
+      "id": "REQ-103",
+      "summary": "Restore the 'HellCod MC' heading to its prominent position at the top of the HeroSection component with existing typography styles",
       "acceptanceCriteria": [
-        "All white text (#FFFFFF, rgb(255,255,255), or equivalent) is changed to black (#000000 or dark gray) in light mode",
-        "The 'Achievements' heading with 'REWARDS' text is clearly readable with black color",
-        "All section headings, body text, and descriptive text are black in light mode",
-        "Text maintains proper contrast and readability against the light purple/lavender backgrounds",
-        "Dark mode text colors remain unchanged (white text for dark backgrounds)"
+        "The 'HellCod MC' heading is displayed prominently at the top of the hero section",
+        "The heading uses white text with purple gradient effects matching the existing theme",
+        "The heading is visible in both light and dark modes with appropriate styling",
+        "The heading appears above the slideshow and server IP card"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Update text color classes in HeroSection to use foreground color tokens that resolve to black in light mode. Change title, subtitle, and button text to use semantic color classes that adapt to theme mode."
-        },
-        {
-          "path": "frontend/src/components/GameplaySection.tsx",
-          "operation": "modify",
-          "description": "Update GameplaySection text colors to black in light mode. Change section heading, feature card titles, and descriptions to use theme-aware foreground color classes."
-        },
-        {
-          "path": "frontend/src/components/RewardsSection.tsx",
-          "operation": "modify",
-          "description": "Update RewardsSection text colors including the 'Achievements' heading and 'REWARDS' text to black in light mode. Modify all headings, reward descriptions, and statistics text to use foreground color tokens."
-        },
-        {
-          "path": "frontend/src/components/ShopInfoSection.tsx",
-          "operation": "modify",
-          "description": "Update ShopInfoSection text colors to black in light mode. Change section heading, item titles, descriptions, and pricing text to use theme-adaptive foreground colors."
-        },
-        {
-          "path": "frontend/src/components/CallToAction.tsx",
-          "operation": "modify",
-          "description": "Update CallToAction text colors to black in light mode. Modify heading and call-to-action message text to use semantic foreground color classes."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Update Footer text colors to black in light mode. Change brand name, server IP, links, and copyright text to use foreground color tokens that resolve to black in light theme."
+          "description": "Add the 'HellCod MC' heading at the top of the HeroSection component, above all other content. Apply white text with purple gradient effects using existing CSS classes and theme-aware styling. Ensure the heading is visible in both light and dark themes, positioned above the ImageSlideshow component (to be added) and all hero cards."
         }
       ]
     },
     {
-      "id": "REQ-91",
-      "summary": "Update frontend/src/index.css to change all white text color CSS custom properties to black for light theme mode",
+      "id": "REQ-104",
+      "summary": "Create ImageSlideshow component with automatic transitions, manual navigation, and responsive design",
       "acceptanceCriteria": [
-        "Light theme foreground color custom properties are set to black or dark gray",
-        "Card text colors in light mode use black for proper readability",
-        "Accent text colors maintain appropriate contrast in light mode",
-        "Dark theme text colors remain white for proper visibility on dark backgrounds"
+        "ImageSlideshow component renders all 6 Minecraft build images from frontend/public/assets/generated",
+        "Images automatically transition every 4-5 seconds with smooth fade effects",
+        "Manual navigation controls (previous/next arrows) allow users to browse images",
+        "Component is responsive and scales appropriately for mobile, tablet, and desktop",
+        "Slideshow styling matches the existing glassmorphism design aesthetic",
+        "Component works correctly in both light and dark theme modes"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Update CSS custom properties in the :root selector to set light mode foreground colors to black (#000000 or oklch(0.2 0 0)). Modify --foreground, --card-foreground, --primary-foreground, --secondary-foreground, --accent-foreground, and --muted-foreground to use black tones. Ensure dark mode (.dark) selectors retain white foreground colors."
+          "path": "frontend/src/components/ImageSlideshow.tsx",
+          "operation": "create",
+          "description": "Create a new ImageSlideshow component that displays 6 Minecraft server build screenshots from frontend/public/assets/generated (minecraft-build-1.dim_1920x1080.png through minecraft-build-6.dim_1920x1080.png). Implement automatic slideshow transitions every 4-5 seconds using setInterval. Add smooth fade transitions between images using CSS transitions or animations. Include manual navigation controls (previous/next arrow buttons) that allow users to browse images and reset the auto-transition timer. Ensure the component is fully responsive for mobile, tablet, and desktop viewports. Apply glassmorphism styling consistent with existing hero cards (backdrop blur, semi-transparent backgrounds, subtle borders). Support both light and dark theme modes using the existing ThemeContext. Use React hooks (useState, useEffect) to manage current image index and auto-transition logic."
         }
       ]
     },
     {
-      "id": "REQ-92",
-      "summary": "Update frontend/tailwind.config.js to define black text colors for light mode theme configuration",
+      "id": "REQ-105",
+      "summary": "Position ImageSlideshow component in HeroSection after the heading and before existing cards",
       "acceptanceCriteria": [
-        "Tailwind theme configuration includes black text colors for light mode",
-        "foreground, card-foreground, and other text-related color tokens use black in light mode",
-        "Dark mode configuration retains white text colors",
-        "All theme color tokens properly support both light and dark modes"
+        "ImageSlideshow appears in the correct position: after the 'HellCod MC' heading and before the server IP card",
+        "The slideshow integrates seamlessly with existing hero section layout and spacing",
+        "The vertical hierarchy is: HellCod MC heading → slideshow → server IP card → three content cards",
+        "Component maintains proper spacing and alignment with surrounding elements"
       ],
       "file_operations": [
         {
-          "path": "frontend/tailwind.config.js",
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Update the theme.extend.colors configuration to set foreground-related color tokens to black values in light mode. Modify foreground, card.foreground, primary.foreground, secondary.foreground, accent.foreground, and muted.foreground to use black OKLCH values (oklch(0.2 0 0) or similar). Verify dark mode variants retain white foreground colors."
+          "description": "Import and render the ImageSlideshow component in the HeroSection layout. Position it immediately after the restored 'HellCod MC' heading and before the existing server IP glassmorphism card. Ensure the vertical hierarchy is: HellCod MC heading → ImageSlideshow → server IP card → three content cards (Game Mode, Version, User Support). Apply appropriate vertical spacing (margin/padding) to maintain visual balance with surrounding elements. Do not modify the existing cards or their layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-106",
+      "summary": "Place 6 Minecraft server build screenshots as static assets and ensure correct image references",
+      "acceptanceCriteria": [
+        "All 6 Minecraft build screenshots are saved as static assets in frontend/public/assets/generated",
+        "Images are named consistently (e.g., minecraft-build-1.png through minecraft-build-6.png)",
+        "ImageSlideshow component correctly references the image paths",
+        "Images load properly without 404 errors"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/minecraft-build-1.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Save the uploaded Minecraft server build night scene with temple and palm trees as a static asset at frontend/public/assets/generated/minecraft-build-1.dim_1920x1080.png. This image will be referenced by the ImageSlideshow component."
+        },
+        {
+          "path": "frontend/public/assets/generated/minecraft-build-2.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Save the uploaded Minecraft server build day scene with purple crystals and central temple as a static asset at frontend/public/assets/generated/minecraft-build-2.dim_1920x1080.png. This image will be referenced by the ImageSlideshow component."
+        },
+        {
+          "path": "frontend/public/assets/generated/minecraft-build-3.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Save the uploaded Minecraft server build front view of main temple with player as a static asset at frontend/public/assets/generated/minecraft-build-3.dim_1920x1080.png. This image will be referenced by the ImageSlideshow component."
+        },
+        {
+          "path": "frontend/public/assets/generated/minecraft-build-4.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Save the uploaded Minecraft server build day scene with purple crystals as a static asset at frontend/public/assets/generated/minecraft-build-4.dim_1920x1080.png. This image will be referenced by the ImageSlideshow component."
+        },
+        {
+          "path": "frontend/public/assets/generated/minecraft-build-5.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Save the uploaded Minecraft server build front view of temple structure as a static asset at frontend/public/assets/generated/minecraft-build-5.dim_1920x1080.png. This image will be referenced by the ImageSlideshow component."
+        },
+        {
+          "path": "frontend/public/assets/generated/minecraft-build-6.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Save the uploaded Minecraft server commands menu interface with red text as a static asset at frontend/public/assets/generated/minecraft-build-6.dim_1920x1080.png. This image will be referenced by the ImageSlideshow component."
         }
       ]
     }

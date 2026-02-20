@@ -1,49 +1,67 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-20T19:28:44.816Z",
+  "generatedAt": "2026-02-20T20:10:27.412Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
-    "implemented": 2,
+    "total": 4,
+    "implemented": 4,
     "items": [
       {
-        "id": "REQ-90",
-        "summary": "Update all white text colors to black throughout the website for better readability against light backgrounds in light mode, including headings, body text, section titles, and all text elements in HeroSection, GameplaySection, RewardsSection, ShopInfoSection, CallToAction, and Footer components",
-        "status": "missing",
-        "plannedFiles": [
-          "frontend/src/components/HeroSection.tsx",
-          "frontend/src/components/GameplaySection.tsx",
-          "frontend/src/components/RewardsSection.tsx",
-          "frontend/src/components/ShopInfoSection.tsx",
-          "frontend/src/components/CallToAction.tsx",
-          "frontend/src/components/Footer.tsx"
-        ],
-        "matchedFiles": []
-      },
-      {
-        "id": "REQ-91",
-        "summary": "Update frontend/src/index.css to change all white text color CSS custom properties to black for light theme mode, ensuring proper contrast ratios",
+        "id": "REQ-103",
+        "summary": "Restore the 'HellCod MC' heading to its prominent position at the top of the HeroSection component, using the existing typography styles (white text with purple gradient effects) and ensure it is visible above all other hero content",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/index.css"
+          "frontend/src/components/HeroSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/index.css"
+          "frontend/src/components/HeroSection.tsx"
         ]
       },
       {
-        "id": "REQ-92",
-        "summary": "Update frontend/tailwind.config.js to define black text colors for light mode theme configuration, replacing white foreground colors",
+        "id": "REQ-104",
+        "summary": "Create a new ImageSlideshow component in frontend/src/components that displays the 6 uploaded Minecraft server build screenshots with automatic slideshow transitions (4-5 second intervals), manual navigation controls (previous/next buttons), smooth fade transitions between images, and responsive sizing",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/tailwind.config.js"
+          "frontend/src/components/ImageSlideshow.tsx"
         ],
         "matchedFiles": [
-          "frontend/tailwind.config.js"
+          "frontend/src/components/ImageSlideshow.tsx"
+        ]
+      },
+      {
+        "id": "REQ-105",
+        "summary": "Position the ImageSlideshow component in the HeroSection component immediately after the restored 'HellCod MC' heading and before the existing server IP glassmorphism card and three content cards (Game Mode, Version, User Support)",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-106",
+        "summary": "Render the 6 uploaded Minecraft server build screenshots as static assets in frontend/public/assets/generated with appropriate filenames and ensure the ImageSlideshow component references these images correctly",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/minecraft-build-1.dim_1920x1080.png",
+          "frontend/public/assets/generated/minecraft-build-2.dim_1920x1080.png",
+          "frontend/public/assets/generated/minecraft-build-3.dim_1920x1080.png",
+          "frontend/public/assets/generated/minecraft-build-4.dim_1920x1080.png",
+          "frontend/public/assets/generated/minecraft-build-5.dim_1920x1080.png",
+          "frontend/public/assets/generated/minecraft-build-6.dim_1920x1080.png"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/minecraft-build-1.dim_1920x1080.png",
+          "frontend/public/assets/generated/minecraft-build-2.dim_1920x1080.png",
+          "frontend/public/assets/generated/minecraft-build-3.dim_1920x1080.png",
+          "frontend/public/assets/generated/minecraft-build-4.dim_1920x1080.png",
+          "frontend/public/assets/generated/minecraft-build-5.dim_1920x1080.png",
+          "frontend/public/assets/generated/minecraft-build-6.dim_1920x1080.png"
         ]
       }
     ]
@@ -53,8 +71,14 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/index.css",
-    "frontend/tailwind.config.js",
+    "frontend/public/assets/generated/minecraft-build-1.dim_1920x1080.png",
+    "frontend/public/assets/generated/minecraft-build-2.dim_1920x1080.png",
+    "frontend/public/assets/generated/minecraft-build-3.dim_1920x1080.png",
+    "frontend/public/assets/generated/minecraft-build-4.dim_1920x1080.png",
+    "frontend/public/assets/generated/minecraft-build-5.dim_1920x1080.png",
+    "frontend/public/assets/generated/minecraft-build-6.dim_1920x1080.png",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/ImageSlideshow.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

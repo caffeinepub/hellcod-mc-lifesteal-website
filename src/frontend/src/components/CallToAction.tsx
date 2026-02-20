@@ -5,12 +5,12 @@ export default function CallToAction() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={ref} className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4">
+    <section ref={ref} className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4 z-10">
       <div className="container mx-auto max-w-4xl">
         <div className={`space-y-10 sm:space-y-12 fade-in-up ${isVisible ? 'visible' : ''}`}>
           {/* Main CTA */}
           <div className="backdrop-blur-xl bg-gradient-to-br from-card/80 via-purple-dark/20 to-card/80 rounded-3xl border border-purple/30 shadow-glass p-8 sm:p-12 md:p-16 space-y-8 text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
               Ready to <span className="text-purple drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]">Dominate?</span>
             </h2>
             

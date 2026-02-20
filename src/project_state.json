@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 29,
+  "projectStateVersion": 33,
   "summary": "Minecraft Lifesteal server website (HellCod MC) with glassmorphism navbar, animated pixel-art clouds on smooth gradient background, premium glassmorphism server IP card, three floating content cards (game mode/version/support), responsive mobile-first design, modern SaaS-level polish, and premium subtle animations (hero text reveal, scroll-based section reveal, magnetic button effect, floating hero card idle animation, animated border trace on hover, copy IP micro-interaction, and mouse light effect in dark mode) with performance optimization",
   "architectural_notes": [
     "Website for Minecraft Lifesteal server promotion",
@@ -16,6 +16,33 @@
   ],
   "known_issues": [],
   "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Minecraft server build night scene with temple and palm trees (minecraft-build-1.dim_1920x1080.png)\n- Minecraft server build day scene with purple crystals and central temple (minecraft-build-2.dim_1920x1080.png)\n- Minecraft server build front view of main temple with player (minecraft-build-3.dim_1920x1080.png)\n- Minecraft server build day scene with purple crystals (minecraft-build-4.dim_1920x1080.png)\n- Minecraft server build front view of temple structure (minecraft-build-5.dim_1920x1080.png)\n- Minecraft server commands menu interface with red text (minecraft-build-6.dim_1920x1080.png)",
+  "generatedImages": [
+    {
+      "filename": "minecraft-build-1.png",
+      "description": "Minecraft server build screenshot 1 for slideshow"
+    },
+    {
+      "filename": "minecraft-build-2.png",
+      "description": "Minecraft server build screenshot 2 for slideshow"
+    },
+    {
+      "filename": "minecraft-build-3.png",
+      "description": "Minecraft server build screenshot 3 for slideshow"
+    },
+    {
+      "filename": "minecraft-build-4.png",
+      "description": "Minecraft server build screenshot 4 for slideshow"
+    },
+    {
+      "filename": "minecraft-build-5.png",
+      "description": "Minecraft server build screenshot 5 for slideshow"
+    },
+    {
+      "filename": "minecraft-build-6.png",
+      "description": "Minecraft server build screenshot 6 for slideshow"
+    }
+  ],
   "existing_features": [
     {
       "id": "feature-create-a-black-screen-intro-sequence-that-displays-on-initial-page-load-with-the-text-welcome-player-unknown-get-ready-to-dive-into-the-world-of-lifesteal-with-hellcodmc-appearing-with-stylized-animation-followed-by-automatic-transition-to-the-main-page",
@@ -576,6 +603,118 @@
         "REQ-92"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-dark-mode-background-in-frontend-src-index-css-to-use-a-dark-purple-gradient-transitioning-from-deep-purple-at-top-to-darker-purple-black-at-bottom-removing-any-existing-light-gradient-or-background-image-references",
+      "title": "Update dark mode background in frontend/src/index.css to use a dark purple gradient transitioning from deep purple at top to darker purple/black at bottom, removing any existing light gradient or background image references",
+      "reqIds": [
+        "REQ-93"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-light-mode-background-in-frontend-src-index-css-to-use-a-soft-aqua-and-light-blue-gradient-transitioning-from-aqua-at-top-to-light-blue-at-bottom-replacing-any-existing-light-mode-background-styling",
+      "title": "Update light mode background in frontend/src/index.css to use a soft aqua and light blue gradient transitioning from aqua at top to light blue at bottom, replacing any existing light mode background styling",
+      "reqIds": [
+        "REQ-94"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-stars-component-in-frontend-src-components-that-renders-small-glowing-pixelated-stars-scattered-randomly-across-the-viewport-with-twinkling-animation-effect-fade-in-out-with-varying-durations-and-only-renders-in-dark-mode",
+      "title": "Create a Stars component in frontend/src/components that renders small glowing pixelated stars scattered randomly across the viewport, with twinkling animation effect (fade in/out with varying durations), and only renders in dark mode",
+      "reqIds": [
+        "REQ-95"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-moon-component-in-frontend-src-components-that-renders-a-small-glowing-white-pixelated-moon-positioned-at-top-mid-right-of-the-viewport-behind-the-cards-with-subtle-glow-effect-and-only-renders-in-dark-mode",
+      "title": "Create a Moon component in frontend/src/components that renders a small glowing white pixelated moon positioned at top mid-right of the viewport behind the cards, with subtle glow effect, and only renders in dark mode",
+      "reqIds": [
+        "REQ-96"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-src-app-tsx-to-include-the-stars-and-moon-components-rendering-them-between-the-background-and-main-content-conditionally-based-on-dark-mode-theme-state",
+      "title": "Update frontend/src/App.tsx to include the Stars and Moon components, rendering them between the background and main content, conditionally based on dark mode theme state",
+      "reqIds": [
+        "REQ-97"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-dark-mode-text-colors-throughout-all-components-to-use-white-and-purple-with-gradient-effects-on-headings-modifying-frontend-src-index-css-css-custom-properties-for-dark-theme-text-colors",
+      "title": "Update dark mode text colors throughout all components to use white and purple with gradient effects on headings, modifying frontend/src/index.css CSS custom properties for dark theme text colors",
+      "reqIds": [
+        "REQ-98"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-light-mode-text-colors-throughout-all-components-to-use-purple-and-black-with-gradient-effects-on-headings-modifying-frontend-src-index-css-css-custom-properties-for-light-theme-text-colors",
+      "title": "Update light mode text colors throughout all components to use purple and black with gradient effects on headings, modifying frontend/src/index.css CSS custom properties for light theme text colors",
+      "reqIds": [
+        "REQ-99"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-smooth-minecraft-style-theme-transition-animation-when-toggling-between-day-and-night-modes-in-frontend-src-index-css-and-frontend-src-contexts-themecontext-tsx-ensuring-transition-is-non-laggy-and-affects-all-theme-aware-properties",
+      "title": "Implement smooth Minecraft-style theme transition animation when toggling between day and night modes in frontend/src/index.css and frontend/src/contexts/ThemeContext.tsx, ensuring transition is non-laggy and affects all theme-aware properties",
+      "reqIds": [
+        "REQ-100"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-tailwind-config-js-to-include-css-custom-properties-and-color-tokens-for-the-new-dark-purple-gradient-colors-night-mode-and-soft-aqua-light-blue-gradient-colors-day-mode",
+      "title": "Update frontend/tailwind.config.js to include CSS custom properties and color tokens for the new dark purple gradient colors (night mode) and soft aqua/light blue gradient colors (day mode)",
+      "reqIds": [
+        "REQ-101"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-verify-all-existing-glassmorphism-effects-in-header-herosection-gameplaysection-rewardssection-shopinfosection-calltoaction-and-footer-components-work-correctly-in-both-light-and-dark-themes-with-appropriate-backdrop-blur-and-opacity-adjustments",
+      "title": "Verify all existing glassmorphism effects in Header, HeroSection, GameplaySection, RewardsSection, ShopInfoSection, CallToAction, and Footer components work correctly in both light and dark themes with appropriate backdrop blur and opacity adjustments",
+      "reqIds": [
+        "REQ-102"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-restore-the-hellcod-mc-heading-to-its-prominent-position-at-the-top-of-the-herosection-component-using-the-existing-typography-styles-white-text-with-purple-gradient-effects-and-ensure-it-is-visible-above-all-other-hero-content",
+      "title": "Restore the 'HellCod MC' heading to its prominent position at the top of the HeroSection component, using the existing typography styles (white text with purple gradient effects) and ensure it is visible above all other hero content",
+      "reqIds": [
+        "REQ-103"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-imageslideshow-component-in-frontend-src-components-that-displays-the-6-uploaded-minecraft-server-build-screenshots-with-automatic-slideshow-transitions-4-5-second-intervals-manual-navigation-controls-previous-next-buttons-smooth-fade-transitions-between-images-and-responsive-sizing",
+      "title": "Create a new ImageSlideshow component in frontend/src/components that displays the 6 uploaded Minecraft server build screenshots with automatic slideshow transitions (4-5 second intervals), manual navigation controls (previous/next buttons), smooth fade transitions between images, and responsive sizing",
+      "reqIds": [
+        "REQ-104"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-position-the-imageslideshow-component-in-the-herosection-component-immediately-after-the-restored-hellcod-mc-heading-and-before-the-existing-server-ip-glassmorphism-card-and-three-content-cards-game-mode-version-user-support",
+      "title": "Position the ImageSlideshow component in the HeroSection component immediately after the restored 'HellCod MC' heading and before the existing server IP glassmorphism card and three content cards (Game Mode, Version, User Support)",
+      "reqIds": [
+        "REQ-105"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-6-uploaded-minecraft-server-build-screenshots-as-static-assets-in-frontend-public-assets-generated-with-appropriate-filenames-and-ensure-the-imageslideshow-component-references-these-images-correctly",
+      "title": "Render the 6 uploaded Minecraft server build screenshots as static assets in frontend/public/assets/generated with appropriate filenames and ensure the ImageSlideshow component references these images correctly",
+      "reqIds": [
+        "REQ-106"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -957,6 +1096,54 @@
       "reqIds": [
         "REQ-90"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-67",
+      "summary": "Update dark mode background to dark purple gradient with small glowing white pixelated moon (top mid-right, behind cards) and twinkling stars (small glowing pixels scattered across background)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-68",
+      "summary": "Update light mode background to soft aqua and light blue gradient (replacing current light background)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-69",
+      "summary": "Update dark mode text colors to white and purple with gradient effects on headings",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-70",
+      "summary": "Update light mode text colors to purple and black mixed throughout with gradient text on headings (not single color headings)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-71",
+      "summary": "Implement smooth Minecraft-style transition between day and night themes (non-laggy)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-72",
+      "summary": "Remove pixelated clouds from both light and dark mode backgrounds",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-73",
+      "summary": "Restore the 'HellCod MC' heading to its prominent position in the hero section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-74",
+      "summary": "Add an image slideshow positioned just before the hero cards and under the main heading, featuring smooth automatic transitions, manual navigation controls, and day/night theme support",
+      "reqIds": [],
       "status": "pending"
     }
   ],

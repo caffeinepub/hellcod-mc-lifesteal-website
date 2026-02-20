@@ -22,13 +22,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     // Apply theme to document root
     const root = document.documentElement;
-    if (theme === 'light') {
-      root.classList.add('light');
-      root.classList.remove('dark');
-    } else {
-      root.classList.add('dark');
-      root.classList.remove('light');
-    }
+    root.classList.remove('light', 'dark');
+    root.classList.add(theme);
     
     // Save to localStorage
     localStorage.setItem('theme-preference', theme);
