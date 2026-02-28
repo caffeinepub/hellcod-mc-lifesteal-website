@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-in-frontend-src-components-shopinfosection-tsx-change-the-crate-keys-pricing-text-from-from-5-to-from-0-11",
+      "featureTitle": "In frontend/src/components/ShopInfoSection.tsx, change the crate keys pricing text from 'From $5' to 'From $0.11'",
+      "files": [
+        "frontend/src/components/ShopInfoSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

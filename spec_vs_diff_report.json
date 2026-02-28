@@ -1,0 +1,14 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-23T14:04:54.659Z",
+  "summary": "All requirements from the BuildRequest have been successfully implemented. The crate keys pricing in ShopInfoSection.tsx has been changed from 'From $5' to 'From $0.11' as requested. No other pricing or text content was modified, meeting all acceptance criteria. No missing requirements or hallucinated features detected.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 1,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/ShopInfoSection.tsx",
+    "project_state.json"
+  ]
+}

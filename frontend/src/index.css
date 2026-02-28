@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1.5rem;
+        /* Dark Purple Theme Color System (Night Mode) */
+        --background: 0.10 0.02 280;
+        --foreground: 0.98 0.01 280;
+        --card: 0.15 0.03 280;
+        --card-foreground: 0.98 0.01 280;
+        --popover: 0.12 0.03 280;
+        --popover-foreground: 0.98 0.01 280;
+        --primary: 0.60 0.20 280;
+        --primary-foreground: 0.98 0.01 280;
+        --secondary: 0.50 0.18 285;
+        --secondary-foreground: 0.98 0.01 280;
+        --muted: 0.20 0.03 280;
+        --muted-foreground: 0.70 0.05 280;
+        --accent: 0.65 0.22 280;
+        --accent-foreground: 0.98 0.01 280;
+        --destructive: 0.60 0.20 15;
+        --destructive-foreground: 0.98 0 0;
+        --border: 0.30 0.08 280 / 40%;
+        --input: 0.25 0.05 280 / 50%;
+        --ring: 0.60 0.20 280;
+        --chart-1: 0.60 0.20 280;
+        --chart-2: 0.55 0.18 285;
+        --chart-3: 0.50 0.16 290;
+        --chart-4: 0.65 0.22 280;
+        --chart-5: 0.70 0.15 275;
+    }
+
+    .light {
+        /* Light Theme Color System (Day Mode) - Purple headings */
+        --background: 0.88 0.05 200;
+        --foreground: 0.15 0.01 280;
+        --card: 0.92 0.04 200;
+        --card-foreground: 0.15 0.01 280;
+        --popover: 0.90 0.04 200;
+        --popover-foreground: 0.15 0.01 280;
+        --primary: 0.55 0.18 280;
+        --primary-foreground: 0.15 0.01 280;
+        --secondary: 0.60 0.16 285;
+        --secondary-foreground: 0.15 0.01 280;
+        --muted: 0.85 0.03 200;
+        --muted-foreground: 0.35 0.03 280;
+        --accent: 0.58 0.20 280;
+        --accent-foreground: 0.15 0.01 280;
+        --destructive: 0.60 0.20 15;
+        --destructive-foreground: 0.98 0 0;
+        --border: 0.80 0.04 200 / 60%;
+        --input: 0.85 0.03 200 / 70%;
+        --ring: 0.55 0.18 280;
+        --chart-1: 0.55 0.18 280;
+        --chart-2: 0.60 0.16 285;
+        --chart-3: 0.65 0.14 290;
+        --chart-4: 0.58 0.20 280;
+        --chart-5: 0.50 0.15 275;
+    }
+
+    .dark {
+        --background: 0.10 0.02 280;
+        --foreground: 0.98 0.01 280;
+        --card: 0.15 0.03 280;
+        --card-foreground: 0.98 0.01 280;
+        --popover: 0.12 0.03 280;
+        --popover-foreground: 0.98 0.01 280;
+        --primary: 0.60 0.20 280;
+        --primary-foreground: 0.98 0.01 280;
+        --secondary: 0.50 0.18 285;
+        --secondary-foreground: 0.98 0.01 280;
+        --muted: 0.20 0.03 280;
+        --muted-foreground: 0.70 0.05 280;
+        --accent: 0.65 0.22 280;
+        --accent-foreground: 0.98 0.01 280;
+        --destructive: 0.60 0.20 15;
+        --destructive-foreground: 0.98 0 0;
+        --border: 0.30 0.08 280 / 40%;
+        --input: 0.25 0.05 280 / 50%;
+        --ring: 0.60 0.20 280;
+    }
+
+    * {
+        @apply border-border;
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
+    }
+    
+    body {
+        @apply text-foreground;
+        background: linear-gradient(180deg, 
+            oklch(0.25 0.08 280) 0%, 
+            oklch(0.15 0.06 285) 50%, 
+            oklch(0.08 0.04 280) 100%
+        );
+        background-attachment: fixed;
+        min-height: 100vh;
+        transition: background 500ms ease-in-out;
+    }
+    
+    .light body {
+        background: linear-gradient(180deg, 
+            oklch(0.88 0.05 200) 0%, 
+            oklch(0.85 0.06 210) 50%, 
+            oklch(0.82 0.07 200) 100%
+        );
+        background-attachment: fixed;
+    }
+    
+    /* Disable custom cursor on touch devices */
+    @media (hover: hover) and (pointer: fine) {
+        body {
+            cursor: none;
+        }
+        
+        * {
+            cursor: none !important;
+        }
+        
+        a, button, input, textarea, select {
+            cursor: none !important;
+        }
+    }
+}
+
+@layer utilities {
+    /* Glassmorphism effects */
+    .glass-card {
+        @apply backdrop-blur-xl bg-card/80 border border-purple/30 rounded-3xl shadow-glass;
+    }
+    
+    .shadow-glass {
+        box-shadow: 
+            0 8px 32px 0 rgba(168, 85, 247, 0.15),
+            inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    }
+    
+    .shadow-glow-purple {
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    }
+    
+    .shadow-glow-purple-intense {
+        box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+    }
+    
+    /* Gradient background utilities */
+    .bg-size-200 {
+        background-size: 200% 100%;
+    }
+    
+    .bg-pos-0 {
+        background-position: 0% 0%;
+    }
+    
+    .bg-pos-100 {
+        background-position: 100% 0%;
+    }
+    
+    /* Animation utilities */
+    .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .fade-in-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    @keyframes hero-text-reveal {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animate-hero-text-reveal {
+        animation: hero-text-reveal 0.8s ease-out forwards;
+        opacity: 0;
+    }
+    
+    @keyframes ripple {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(20);
+            opacity: 0;
+        }
+    }
+    
+    .animate-ripple {
+        animation: ripple 0.6s ease-out;
+    }
+    
+    @keyframes twinkle {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+    }
+    
+    .animate-twinkle {
+        animation: twinkle var(--duration, 3s) ease-in-out infinite;
+        animation-delay: var(--delay, 0s);
+    }
+    
+    @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+    }
+}

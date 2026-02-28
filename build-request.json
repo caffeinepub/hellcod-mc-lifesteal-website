@@ -1,0 +1,38 @@
+{
+  "kind": "build_request",
+  "title": "Update crate keys pricing from $5 to $0.11",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "In frontend/src/components/ShopInfoSection.tsx, change the crate keys pricing text from 'From $5' to 'From $0.11'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-request"
+        ],
+        "quotes": [
+          "see in ShopInfoSection.tsx the crate keys says \"From $5\" make it \"From $0.11\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "The crate keys pricing displays 'From $0.11' instead of 'From $5'",
+        "No other pricing or text content is modified",
+        "The component renders without errors"
+      ]
+    }
+  ],
+  "constraints": [
+    "Only modify the pricing text for crate keys in ShopInfoSection.tsx",
+    "Do not change any other component files or pricing information"
+  ],
+  "nonGoals": [
+    "Modifying premium items pricing",
+    "Changing layout or styling of the shop section",
+    "Adding new shop items or features"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
